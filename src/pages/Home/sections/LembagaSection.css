@@ -1,0 +1,274 @@
+.lembaga-section {
+  position: relative;
+  background-color: var(--white);
+  padding: 120px 110px 82px;
+  overflow: hidden;
+}
+
+.lembaga-accent {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.lembaga-accent-1 {
+  top: 0;
+  left: 443px;
+  width: 277px;
+  height: 277px;
+}
+
+.lembaga-accent-2 {
+  top: 399px;
+  left: 36px;
+  width: 333px;
+  height: 333px;
+}
+
+.lembaga-accent img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0.6;
+}
+
+.lembaga-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  gap: 72px;
+  align-items: center;
+  max-width: 1220px;
+  margin: 0 auto;
+}
+
+.lembaga-image-wrapper {
+  position: relative;
+  flex: 1;
+  height: 744px;
+  display: flex;
+  align-items: center;
+}
+
+.lembaga-image-border {
+  position: absolute;
+  top: -120px;
+  left: 44px;
+  width: 430px;
+  height: 654px;
+  border: 1px solid var(--secondary-color);
+  border-top: none;
+  border-radius: 0 0 260px 260px;
+  background-color: var(--white);
+}
+
+.lembaga-image-container {
+  position: absolute;
+  top: -120px;
+  left: 63px;
+  width: 392px;
+  height: 633px;
+  border-radius: 0 0 237px 237px;
+  overflow: hidden;
+}
+
+.lembaga-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.lembaga-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 71px;
+}
+
+.lembaga-text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.lembaga-title {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 52px;
+  text-transform: uppercase;
+  color: var(--headings-black);
+  margin: 0;
+}
+
+.lembaga-description {
+  font-family: var(--font-secondary);
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--text-gray);
+  margin: 0;
+}
+
+.lembaga-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 51px;
+}
+
+.lembaga-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 571px;
+}
+
+.lembaga-stat-number {
+  font-family: var(--font-secondary);
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 30px;
+  color: var(--headings-black);
+  margin: 0;
+}
+
+.lembaga-stat-title {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 31px;
+  color: var(--headings-black);
+  margin: 0;
+}
+
+.lembaga-stat-description {
+  font-family: var(--font-secondary);
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 26px;
+  color: var(--text-gray);
+  margin: 0;
+}
+
+.lembaga-link {
+  font-style: italic;
+  color: var(--primary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .lembaga-section {
+    padding: 100px 60px 60px;
+  }
+
+  .lembaga-container {
+    gap: 50px;
+  }
+
+  .lembaga-image-wrapper {
+    height: 600px;
+  }
+
+  .lembaga-image-border {
+    width: 350px;
+    height: 550px;
+    left: 30px;
+  }
+
+  .lembaga-image-container {
+    width: 320px;
+    height: 530px;
+    left: 45px;
+  }
+}
+
+@media (max-width: 968px) {
+  .lembaga-section {
+    padding: 80px 40px 60px;
+  }
+
+  .lembaga-container {
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  .lembaga-image-wrapper {
+    height: 500px;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .lembaga-image-border {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .lembaga-image-container {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .lembaga-accent-1 {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .lembaga-accent-2 {
+    left: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .lembaga-section {
+    padding: 60px 30px 40px;
+  }
+
+  .lembaga-title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .lembaga-description {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .lembaga-stat-number {
+    font-size: 42px;
+  }
+
+  .lembaga-stat-title {
+    font-size: 26px;
+  }
+
+  .lembaga-stat-description {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .lembaga-image-wrapper {
+    height: 400px;
+    max-width: 320px;
+  }
+
+  .lembaga-image-border {
+    width: 280px;
+    height: 450px;
+    border-radius: 0 0 180px 180px;
+  }
+
+  .lembaga-image-container {
+    width: 250px;
+    height: 430px;
+    border-radius: 0 0 160px 160px;
+  }
+
+  .lembaga-accent-1,
+  .lembaga-accent-2 {
+    width: 200px;
+    height: 200px;
+  }
+}

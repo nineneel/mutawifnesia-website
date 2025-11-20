@@ -1,0 +1,117 @@
+:root {
+  /* Primary Brand Colors */
+  --primary-color: #BC1F22;
+  --primary-dark: #9a191c;
+  --primary-red-dark: #650709;
+
+  /* Secondary Brand Colors */
+  --secondary-color: #E4BD49;
+  --secondary-dark: #c9a437;
+
+  /* Base Colors */
+  --white: #ffffff;
+  --black: #000000;
+  --headings-black: #1A1A1A;
+  --text-gray: #3A3A3A;
+  --color-200: #E8E8E8;
+
+  /* Background Colors */
+  --bg-primary: var(--white);
+  --bg-dark: var(--primary-red-dark);
+
+  /* Text Colors */
+  --text-primary: var(--headings-black);
+  --text-secondary: var(--text-gray);
+  --text-white: var(--white);
+
+  /* Font Families */
+  --font-primary: 'Playfair Display', Georgia, serif;
+  --font-secondary: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-accent: 'Plus Jakarta Sans', sans-serif;
+
+  /* Font Weights */
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Font Sizes - Based on Home Page Usage */
+  --font-size-sm: 0.875rem;  /* 14px */
+  --font-size-base: 1rem;    /* 16px */
+  --font-size-lg: 1.125rem;  /* 18px */
+  --font-size-xl: 1.25rem;   /* 20px */
+  --font-size-2xl: 1.375rem; /* 22px */
+  --font-size-3xl: 1.5rem;   /* 24px */
+  --font-size-4xl: 2rem;     /* 32px */
+  --font-size-5xl: 2.625rem; /* 42px */
+  --font-size-6xl: 2.75rem;  /* 44px */
+  --font-size-7xl: 3.375rem; /* 54px */
+  --font-size-8xl: 4.0625rem; /* 65px */
+
+  /* Line Heights */
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+
+  /* Spacing - Based on Home Page Usage */
+  --spacing-2xs: 0.5rem;   /* 8px */
+  --spacing-xs: 1rem;      /* 16px */
+  --spacing-sm: 1.25rem;   /* 20px */
+  --spacing-md: 1.5rem;    /* 24px */
+  --spacing-lg: 1.75rem;   /* 28px */
+  --spacing-xl: 2.875rem;  /* 46px */
+  --spacing-2xl: 3.3125rem; /* 53px */
+  --spacing-3xl: 4.4375rem; /* 71px */
+  --spacing-4xl: 4.5rem;   /* 72px */
+  --spacing-5xl: 6.3125rem; /* 101px */
+  --spacing-6xl: 6.875rem; /* 110px */
+  --spacing-7xl: 7.5rem;   /* 120px */
+  --spacing-8xl: 10.625rem; /* 170px */
+  --spacing-9xl: 13.125rem; /* 210px */
+
+  /* Border Radius */
+  --radius-sm: 0.25rem;    /* 4px */
+  --radius-md: 0.5rem;     /* 8px */
+  --radius-lg: 1.5rem;     /* 24px */
+  --radius-xl: 2.9545rem;  /* 47.273px */
+  --radius-curved: 16.25rem; /* 260px */
+  --radius-full: 9999px;
+
+  /* Shadows - Based on Home Page Usage */
+  --shadow-text-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+  --shadow-text-md: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-text-lg: 0 4px 12px rgba(0, 0, 0, 0.5), 0 2px 4px rgba(0, 0, 0, 0.3);
+  --shadow-button: 0 4px 12px rgba(228, 189, 73, 0.3);
+
+  /* Transitions */
+  --transition-fast: 150ms ease-in-out;
+  --transition-normal: 300ms ease;
+  --transition-slow: 500ms ease-in-out;
+
+  /* Overlays */
+  --overlay-gradient: linear-gradient(to top, rgba(101, 7, 9, 0.8) 0%, transparent 60%);
+  --badge-bg: rgba(188, 31, 34, 0.4);
+
+  /* Container Widths - Based on Home Page Usage */
+  --container-xs: 598px;
+  --container-sm: 614px;
+  --container-md: 914px;
+  --container-lg: 1048px;
+  --container-xl: 1148px;
+  --container-2xl: 1220px;
+
+  /* Z-Index Scale */
+  --z-background: 0;
+  --z-content: 1;
+  --z-elevated: 2;
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-modal: 1050;
+
+  /* Responsive Breakpoints */
+  --breakpoint-xs: 480px;
+  --breakpoint-sm: 768px;
+  --breakpoint-md: 968px;
+  --breakpoint-lg: 1200px;
+  --breakpoint-xl: 1440px;
+}

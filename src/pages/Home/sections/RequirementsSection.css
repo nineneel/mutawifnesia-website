@@ -1,0 +1,181 @@
+.requirements-section {
+  position: relative;
+  background-color: var(--white);
+  padding: 120px 110px 120px 210px;
+  overflow: hidden;
+}
+
+.requirements-accent {
+  position: absolute;
+  top: 256px;
+  left: 820px;
+  width: 220px;
+  height: 220px;
+  background-image: url('/images/sections/syarat-accent.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.6;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.requirements-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  gap: 72px;
+  align-items: center;
+  max-width: 1220px;
+  margin: 0 auto;
+}
+
+.requirements-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.requirements-title {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 52px;
+  text-transform: uppercase;
+  color: var(--headings-black);
+  margin: 0;
+}
+
+.requirements-description {
+  font-family: var(--font-secondary);
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--text-gray);
+  margin: 0;
+}
+
+.requirements-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 558px;
+}
+
+.requirement-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 11.5px;
+  font-family: var(--font-secondary);
+  font-size: 18px;
+  line-height: 22px;
+  color: var(--headings-black);
+}
+
+.check-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.requirements-image-wrapper {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.requirements-image-border {
+  width: 533px;
+  height: 328px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 164px 0 0 164px;
+  background-color: var(--white);
+}
+
+.requirements-image-container {
+  position: absolute;
+  top: 11.21px;
+  left: 13px;
+  width: 520px;
+  height: 307px;
+  border-radius: 153.5px 0 0 153.5px;
+  overflow: hidden;
+}
+
+.requirements-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .requirements-section {
+    padding: 100px 60px;
+  }
+
+  .requirements-container {
+    flex-direction: column-reverse;
+    gap: 50px;
+  }
+
+  .requirements-image-border {
+    width: 450px;
+    height: 280px;
+    border-radius: 140px 0 0 140px;
+  }
+
+  .requirements-image-container {
+    width: 440px;
+    height: 260px;
+    border-radius: 130px 0 0 130px;
+  }
+
+  .requirements-accent {
+    left: auto;
+    right: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .requirements-section {
+    padding: 60px 30px;
+  }
+
+  .requirements-title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .requirements-description {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .requirement-item {
+    font-size: 16px;
+  }
+
+  .requirements-image-border {
+    width: 100%;
+    max-width: 350px;
+    height: 220px;
+    border-radius: 110px 0 0 110px;
+  }
+
+  .requirements-image-container {
+    width: calc(100% - 10px);
+    max-width: 340px;
+    height: 200px;
+    border-radius: 100px 0 0 100px;
+  }
+
+  .requirements-accent {
+    width: 150px;
+    height: 150px;
+  }
+}
