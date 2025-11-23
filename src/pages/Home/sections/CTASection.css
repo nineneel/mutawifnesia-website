@@ -1,0 +1,119 @@
+.cta-section {
+  padding: 60px 110px;
+  /* background: var(--white); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cta-section.cta-bottom {
+  background: var(--white);
+}
+
+.cta-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+  padding: 60px 60px;
+  background-image: url('/images/cta-background.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.cta-section.cta-bottom .cta-container {
+  background-image: url('/images/cta-background-2.webp');
+}
+
+.cta-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.cta-title {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-4xl);
+  line-height: var(--line-height-tight);
+  color: var(--white);
+  margin: 0;
+  letter-spacing: -0.01em;
+  max-width: 800px;
+  position: relative;
+  z-index: 2;
+}
+
+.cta-subtitle {
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-normal);
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-normal);
+  color: var(--white);
+  margin: 0;
+  max-width: 650px;
+  opacity: 0.95;
+  position: relative;
+  z-index: 2;
+}
+
+.cta-container .btn {
+  position: relative;
+  z-index: 2;
+  margin-top: 12px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .cta-section {
+    padding: 50px 60px;
+  }
+
+  .cta-container {
+    padding: 50px 50px;
+  }
+
+  .cta-title {
+    font-size: var(--font-size-3xl);
+  }
+}
+
+@media (max-width: 768px) {
+  .cta-section {
+    padding: 40px 40px;
+  }
+
+  .cta-container {
+    padding: 40px 40px;
+    gap: 18px;
+  }
+
+  .cta-title {
+    font-size: var(--font-size-3xl);
+  }
+}
+
+@media (max-width: 480px) {
+  .cta-section {
+    padding: 30px 24px;
+  }
+
+  .cta-container {
+    padding: 30px 28px;
+    gap: 16px;
+  }
+
+  .cta-title {
+    font-size: var(--font-size-xl);
+  }
+}

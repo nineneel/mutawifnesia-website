@@ -2,7 +2,7 @@
   /* Primary Brand Colors */
   --primary-color: #BC1F22;
   --primary-dark: #9a191c;
-  --primary-red-dark: #650709;
+  --primary-red-dark: #2e1616;
 
   /* Secondary Brand Colors */
   --secondary-color: #E4BD49;
@@ -25,8 +25,8 @@
   --text-white: var(--white);
 
   /* Font Families */
-  --font-primary: 'Playfair Display', Georgia, serif;
-  --font-secondary: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-primary: 'Plus Jakarta Sans', Georgia, serif;
+  --font-secondary: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-accent: 'Plus Jakarta Sans', sans-serif;
 
   /* Font Weights */

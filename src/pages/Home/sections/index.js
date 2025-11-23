@@ -1,6 +1,8 @@
 export { default as HeroSection } from './HeroSection';
-export { default as WhyMutawifSection } from './WhyMutawifSection';
-export { default as BenefitsSection } from './BenefitsSection';
+export { default as MutawifPurposeSection } from './MutawifGoalSection';
+export { default as CTASection } from './CTASection';
+export { default as WhyMutawifnesiaSection } from './WhyMutawifnesiaSection';
+export { default as WhatIsMutawifSection } from './WhatIsMutawifSection';
 export { default as LembagaSection } from './LembagaSection';
 export { default as RequirementsSection } from './RequirementsSection';
 export { default as JoinCtaSection } from './JoinCtaSection';

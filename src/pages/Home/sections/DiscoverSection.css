@@ -1,3 +1,8 @@
+.check-icon {
+  width: 14px;
+  height: 14px;
+}
+
 .discover-section {
   background-color: var(--white);
   padding: 82px 210px;
@@ -21,7 +26,6 @@
   font-weight: 700;
   font-size: 44px;
   line-height: 52px;
-  text-transform: uppercase;
   color: var(--headings-black);
   margin: 0;
 }
@@ -92,10 +96,10 @@
 .package-features li {
   display: flex;
   align-items: flex-start;
-  gap: 11.5px;
+  gap: 12px;
   font-family: var(--font-secondary);
   font-size: 10px;
-  line-height: 14px;
+  /* line-height: 14px; */
   color: var(--headings-black);
 }
 
@@ -107,11 +111,12 @@
 
 .package-info {
   border-top: 1px solid var(--gray-200);
-  padding-top: 20px;
+  padding-top: 12px;
 }
 
 .info-badges {
   display: flex;
+  flex-wrap: wrap;
   gap: 7px;
   margin-bottom: 15px;
 }

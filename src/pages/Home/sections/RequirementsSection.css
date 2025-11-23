@@ -1,181 +1,143 @@
 .requirements-section {
-  position: relative;
-  background-color: var(--white);
-  padding: 120px 110px 120px 210px;
-  overflow: hidden;
+  padding: clamp(64px, 8vw, 140px) clamp(24px, 7vw, 110px);
 }
 
-.requirements-accent {
-  position: absolute;
-  top: 256px;
-  left: 820px;
-  width: 220px;
-  height: 220px;
-  background-image: url('/images/sections/syarat-accent.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  opacity: 0.6;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.requirements-container {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  gap: 72px;
-  align-items: center;
-  max-width: 1220px;
+.requirements-inner {
+  max-width: 1200px;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  align-items: center;
+  gap: clamp(32px, 6vw, 96px);
 }
 
-.requirements-content {
-  flex: 1;
+.requirements-copy {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: clamp(24px, 4vw, 48px);
+  color: var(--dynamic-text-color, var(--text-white));
 }
 
-.requirements-title {
+.requirements-header {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.requirements-eyebrow {
+  font-family: var(--font-secondary);
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+}
+
+.requirements-heading {
   font-family: var(--font-primary);
   font-weight: 700;
-  font-size: 44px;
-  line-height: 52px;
-  text-transform: uppercase;
-  color: var(--headings-black);
+  font-size: clamp(36px, 5vw, 56px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
   margin: 0;
+  color: var(--dynamic-text-color, var(--text-white));
 }
 
 .requirements-description {
   font-family: var(--font-secondary);
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 24px;
-  color: var(--text-gray);
+  font-size: clamp(16px, 1.2vw, 18px);
+  line-height: 1.6;
   margin: 0;
+  color: var(--dynamic-text-color, rgba(255, 255, 255, 0.9));
 }
 
 .requirements-list {
   list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  max-width: 558px;
+  gap: 18px;
 }
 
-.requirement-item {
+.requirements-item {
   display: flex;
   align-items: flex-start;
-  gap: 11.5px;
+  gap: 14px;
   font-family: var(--font-secondary);
-  font-size: 18px;
-  line-height: 22px;
-  color: var(--headings-black);
+  font-size: clamp(15px, 1.2vw, 18px);
+  line-height: 1.5;
+  color: var(--dynamic-text-color, var(--text-white));
 }
 
-.check-icon {
-  width: 18px;
-  height: 18px;
+.requirements-item-icon {
+  width: 24px;
+  height: 24px;
   flex-shrink: 0;
-  margin-top: 2px;
+  margin-top: 4px;
+  display: block;
+  color: var(--secondary-color);
 }
 
-.requirements-image-wrapper {
+.requirements-visual {
   position: relative;
-  flex-shrink: 0;
-}
-
-.requirements-image-border {
-  width: 533px;
-  height: 328px;
-  border: 1px solid var(--secondary-color);
-  border-radius: 164px 0 0 164px;
-  background-color: var(--white);
-}
-
-.requirements-image-container {
-  position: absolute;
-  top: 11.21px;
-  left: 13px;
-  width: 520px;
-  height: 307px;
-  border-radius: 153.5px 0 0 153.5px;
+  margin: 0;
+  min-height: 460px;
+  border: 2px solid var(--secondary-color);
+  padding: clamp(12px, 1.6vw, 12px);
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
   overflow: hidden;
 }
 
-.requirements-image {
+.requirements-visual-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  display: block;
 }
 
-/* Responsive Design */
-@media (max-width: 1200px) {
-  .requirements-section {
-    padding: 100px 60px;
+@media (max-width: 1024px) {
+  .requirements-inner {
+    grid-template-columns: 1fr;
+    gap: 56px;
   }
 
-  .requirements-container {
-    flex-direction: column-reverse;
-    gap: 50px;
-  }
-
-  .requirements-image-border {
-    width: 450px;
-    height: 280px;
-    border-radius: 140px 0 0 140px;
-  }
-
-  .requirements-image-container {
-    width: 440px;
-    height: 260px;
-    border-radius: 130px 0 0 130px;
-  }
-
-  .requirements-accent {
-    left: auto;
-    right: 50px;
+  .requirements-visual {
+    order: -1;
+    max-width: 560px;
+    margin: 0 auto;
+    min-height: 420px;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 720px) {
   .requirements-section {
-    padding: 60px 30px;
+    padding: clamp(48px, 12vw, 84px) clamp(16px, 6vw, 48px);
   }
 
-  .requirements-title {
-    font-size: 32px;
-    line-height: 40px;
+  .requirements-copy {
+    gap: 32px;
   }
 
-  .requirements-description {
-    font-size: 14px;
-    line-height: 22px;
+  .requirements-list {
+    gap: 14px;
+  }
+}
+
+@media (max-width: 540px) {
+  .requirements-visual {
+    padding: 12px;
+    min-height: 360px;
   }
 
-  .requirement-item {
-    font-size: 16px;
+  .requirements-visual-accent {
+    inset: 18px;
   }
 
-  .requirements-image-border {
-    width: 100%;
-    max-width: 350px;
-    height: 220px;
-    border-radius: 110px 0 0 110px;
-  }
-
-  .requirements-image-container {
-    width: calc(100% - 10px);
-    max-width: 340px;
-    height: 200px;
-    border-radius: 100px 0 0 100px;
-  }
-
-  .requirements-accent {
-    width: 150px;
-    height: 150px;
+  .requirements-item {
+    font-size: 15px;
   }
 }

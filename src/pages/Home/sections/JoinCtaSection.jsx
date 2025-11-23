@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import Button from '../../../components/common/Button';
 import './JoinCtaSection.css';
 
 const JoinCtaSection = () => {
@@ -20,9 +20,9 @@ const JoinCtaSection = () => {
             dan memiliki skema sertifikasi yang disahkan oleh Kementerian Haji &
             Umrah RI.
           </p>
-          <Link to="/join" className="join-cta-button">
+          <Button to="/join" variant="primary" size="large">
             Gabung Sekarang
-          </Link>
+          </Button>
         </div>
       </div>
     </section>

@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import Button from '../../../components/common/Button';
 import './HeroSection.css';
 
 const HeroSection = () => {
@@ -10,19 +10,18 @@ const HeroSection = () => {
       </div>
 
       <div className="hero-content">
-        <div className="hero-badge">
-          <p>Association Mutawif Indonesia</p>
+        <div className="hero-text">
+          <h1 className="hero-title">
+            Professional Certification for Future Mutawif Indonesia
+          </h1>
+          <p className="hero-subtitle">
+            Bergabunglah dengan program sertifikasi mutawif profesional dan wujudkan impian membimbing jamaah haji
+          </p>
         </div>
-        <h1 className="hero-title">
-          Professional Certification for Future Mutawif Indonesia
-        </h1>
-      </div>
 
-      <div className="hero-cta">
-        <div className="hero-line"></div>
-        <Link to="/join" className="hero-button">
+        <Button to="/join" variant="primary" size="large">
           Gabung Sekarang
-        </Link>
+        </Button>
       </div>
     </section>
   );

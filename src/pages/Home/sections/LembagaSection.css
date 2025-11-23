@@ -1,274 +1,146 @@
 .lembaga-section {
-  position: relative;
-  background-color: var(--white);
-  padding: 120px 110px 82px;
-  overflow: hidden;
+  padding: clamp(64px, 8vw, 140px) clamp(24px, 7vw, 100px);
 }
 
-.lembaga-accent {
-  position: absolute;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.lembaga-accent-1 {
-  top: 0;
-  left: 443px;
-  width: 277px;
-  height: 277px;
-}
-
-.lembaga-accent-2 {
-  top: 399px;
-  left: 36px;
-  width: 333px;
-  height: 333px;
-}
-
-.lembaga-accent img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  opacity: 0.6;
-}
-
-.lembaga-container {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  gap: 72px;
-  align-items: center;
-  max-width: 1220px;
+.lembaga-inner {
+  max-width: 1200px;
   margin: 0 auto;
-}
-
-.lembaga-image-wrapper {
-  position: relative;
-  flex: 1;
-  height: 744px;
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
   align-items: center;
+  gap: clamp(32px, 6vw, 96px);
 }
 
-.lembaga-image-border {
-  position: absolute;
-  top: -120px;
-  left: 44px;
-  width: 430px;
-  height: 654px;
-  border: 1px solid var(--secondary-color);
-  border-top: none;
-  border-radius: 0 0 260px 260px;
-  background-color: var(--white);
-}
-
-.lembaga-image-container {
-  position: absolute;
-  top: -120px;
-  left: 63px;
-  width: 392px;
-  height: 633px;
-  border-radius: 0 0 237px 237px;
+.lembaga-visual {
+  position: relative;
+  margin: 0;
+  min-height: 460px;
+  border: 2px solid var(--secondary-color);
+  padding: clamp(12px, 1.6vw, 12px);
+  background: rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
   overflow: hidden;
 }
 
-.lembaga-image {
+.lembaga-visual-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  display: block;
 }
 
-.lembaga-content {
-  flex: 1;
+.lembaga-copy {
   display: flex;
   flex-direction: column;
-  gap: 71px;
+  gap: clamp(24px, 4vw, 42px);
+  color: var(--dynamic-text-color, var(--text-white));
 }
 
-.lembaga-text {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.lembaga-title {
+.lembaga-heading {
   font-family: var(--font-primary);
   font-weight: 700;
-  font-size: 44px;
-  line-height: 52px;
-  text-transform: uppercase;
-  color: var(--headings-black);
+  font-size: clamp(36px, 5vw, 56px);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
   margin: 0;
+  color: var(--dynamic-text-color, var(--text-white));
+}
+
+.lembaga-heading span {
+  display: block;
 }
 
 .lembaga-description {
   font-family: var(--font-secondary);
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 24px;
-  color: var(--text-gray);
+  font-size: clamp(16px, 1.2vw, 18px);
+  line-height: 1.6;
   margin: 0;
+  color: var(--dynamic-text-color, rgba(255, 255, 255, 0.9));
 }
 
-.lembaga-stats {
+.lembaga-highlight {
   display: flex;
   flex-direction: column;
-  gap: 51px;
+  align-items: start;
+  /* gap: clamp(18px, 3vw, 32px); */
 }
 
-.lembaga-stat {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  max-width: 571px;
-}
-
-.lembaga-stat-number {
+.lembaga-highlight-value {
   font-family: var(--font-secondary);
-  font-weight: 600;
-  font-size: 54px;
-  line-height: 30px;
-  color: var(--headings-black);
+  font-weight: 700;
+  font-size: clamp(52px, 6vw, 72px);
+  line-height: 1;
   margin: 0;
+  color: var(--secondary-color);
 }
 
-.lembaga-stat-title {
+.lembaga-highlight-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.lembaga-highlight-title {
   font-family: var(--font-primary);
   font-weight: 700;
-  font-size: 32px;
-  line-height: 31px;
-  color: var(--headings-black);
+  font-size: clamp(22px, 3vw, 30px);
   margin: 0;
+  color: var(--dynamic-text-color, var(--text-white));
 }
 
-.lembaga-stat-description {
+.lembaga-highlight-caption {
   font-family: var(--font-secondary);
-  font-weight: 300;
-  font-size: 18px;
-  line-height: 26px;
-  color: var(--text-gray);
+  font-size: clamp(15px, 1.1vw, 18px);
+  line-height: 1.5;
   margin: 0;
+  color: var(--dynamic-text-color, var(--text-white));
 }
 
 .lembaga-link {
+  color: var(--secondary-color);
+  font-weight: 600;
   font-style: italic;
-  color: var(--primary-color);
+  text-decoration: none;
 }
 
-/* Responsive Design */
-@media (max-width: 1200px) {
-  .lembaga-section {
-    padding: 100px 60px 60px;
+.lembaga-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+  .lembaga-inner {
+    grid-template-columns: 1fr;
   }
 
-  .lembaga-container {
-    gap: 50px;
-  }
-
-  .lembaga-image-wrapper {
-    height: 600px;
-  }
-
-  .lembaga-image-border {
-    width: 350px;
-    height: 550px;
-    left: 30px;
-  }
-
-  .lembaga-image-container {
-    width: 320px;
-    height: 530px;
-    left: 45px;
+  .lembaga-visual {
+    max-width: 540px;
+    margin: 0 auto;
+    min-height: 420px;
   }
 }
 
-@media (max-width: 968px) {
+@media (max-width: 720px) {
   .lembaga-section {
-    padding: 80px 40px 60px;
+    padding: clamp(48px, 12vw, 80px) clamp(16px, 6vw, 48px);
   }
 
-  .lembaga-container {
+  .lembaga-highlight {
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 540px) {
+  .lembaga-visual {
+    padding: 12px;
+    min-height: 360px;
+  }
+  
+  .lembaga-highlight {
     flex-direction: column;
-    gap: 60px;
   }
 
-  .lembaga-image-wrapper {
-    height: 500px;
-    width: 100%;
-    max-width: 400px;
-  }
-
-  .lembaga-image-border {
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .lembaga-image-container {
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .lembaga-accent-1 {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .lembaga-accent-2 {
-    left: 20px;
-  }
-}
-
-@media (max-width: 768px) {
-  .lembaga-section {
-    padding: 60px 30px 40px;
-  }
-
-  .lembaga-title {
-    font-size: 32px;
-    line-height: 40px;
-  }
-
-  .lembaga-description {
-    font-size: 14px;
-    line-height: 22px;
-  }
-
-  .lembaga-stat-number {
-    font-size: 42px;
-  }
-
-  .lembaga-stat-title {
-    font-size: 26px;
-  }
-
-  .lembaga-stat-description {
-    font-size: 16px;
-    line-height: 24px;
-  }
-
-  .lembaga-image-wrapper {
-    height: 400px;
-    max-width: 320px;
-  }
-
-  .lembaga-image-border {
-    width: 280px;
-    height: 450px;
-    border-radius: 0 0 180px 180px;
-  }
-
-  .lembaga-image-container {
-    width: 250px;
-    height: 430px;
-    border-radius: 0 0 160px 160px;
-  }
-
-  .lembaga-accent-1,
-  .lembaga-accent-2 {
-    width: 200px;
-    height: 200px;
+  .lembaga-highlight-value {
+    font-size: 48px;
   }
 }
