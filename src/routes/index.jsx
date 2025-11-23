@@ -20,12 +20,12 @@ export const router = createBrowserRouter([
         element: <About />
       },
       {
-        path: 'contact',
-        element: <Contact />
-      },
-      {
         path: 'obligation',
         element: <Obligation />
+      },
+      {
+        path: 'join',
+        element: <Home />
       },
       {
         path: '*',

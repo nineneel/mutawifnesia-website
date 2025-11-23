@@ -47,6 +47,24 @@ const Home = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (typeof document === 'undefined') {
+      return;
+    }
+
+    document.body.dataset.homeBg = isDarkBg ? 'dark' : 'light';
+  }, [isDarkBg]);
+
+  useEffect(() => {
+    return () => {
+      if (typeof document === 'undefined') {
+        return;
+      }
+
+      delete document.body.dataset.homeBg;
+    };
+  }, []);
+
   return (
     <div
       className={`home ${isDarkBg ? 'dark-bg' : 'light-bg'}`}

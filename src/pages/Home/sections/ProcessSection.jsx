@@ -1,28 +1,7 @@
-import { forwardRef, useEffect, useState } from 'react';
+import { forwardRef } from 'react';
 import './ProcessSection.css';
 
 const ProcessSection = forwardRef((props, ref) => {
-  const [isSmallDevice, setIsSmallDevice] = useState(false);
-
-  useEffect(() => {
-    if (typeof window === 'undefined' || !window.matchMedia) {
-      return;
-    }
-
-    const mediaQuery = window.matchMedia('(max-width: 768px)');
-    const handleChange = event => setIsSmallDevice(event.matches);
-
-    handleChange(mediaQuery);
-
-    if (mediaQuery.addEventListener) {
-      mediaQuery.addEventListener('change', handleChange);
-      return () => mediaQuery.removeEventListener('change', handleChange);
-    }
-
-    mediaQuery.addListener(handleChange);
-    return () => mediaQuery.removeListener(handleChange);
-  }, []);
-
   const steps = [
     {
       number: '01',
@@ -62,23 +41,14 @@ const ProcessSection = forwardRef((props, ref) => {
         {steps.map((step, index) => (
           <div key={index} className="timeline-step">
             <div className="timeline-header">
-              {!isSmallDevice && (
-                <div className="timeline-line">
-                  <svg viewBox="0 0 337 18" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                    <circle cx="9" cy="9" r="8" fill="white" />
-                    <line x1="18" y1="9" x2="337" y2="9" stroke="white" strokeWidth="2" strokeLinecap="round" />
-                  </svg>
-                </div>
-              )}
+              {/* TODO: rotate the line to below if we are on the small devices */}
+              <div className="timeline-line">
+                <svg viewBox="0 0 337 18" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                  <circle cx="9" cy="9" r="8" fill="white" />
+                  <line x1="18" y1="9" x2="337" y2="9" stroke="white" strokeWidth="2" strokeLinecap="round" />
+                </svg>
+              </div>
               <p className="step-number">{step.number}</p>
-              {isSmallDevice && (
-                <div className="timeline-line timeline-line--vertical">
-                  <svg viewBox="0 0 337 18" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                    <circle cx="9" cy="9" r="8" fill="white" />
-                    <line x1="18" y1="9" x2="337" y2="9" stroke="white" strokeWidth="2" strokeLinecap="round" />
-                  </svg>
-                </div>
-              )}
             </div>
             
             <p className="step-title">{step.title}</p>
