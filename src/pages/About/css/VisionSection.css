@@ -1,0 +1,205 @@
+.vision-section {
+  padding: clamp(64px, 8vw, 120px) clamp(24px, 7vw, 100px);
+  background: #ffffff;
+}
+
+.vision-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.vision-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.vision-main-title {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: clamp(36px, 5vw, 56px);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0 0 20px;
+  color: var(--black);
+}
+
+.vision-main-description {
+  font-family: var(--font-secondary);
+  font-size: clamp(16px, 1.2vw, 18px);
+  line-height: 1.6;
+  margin: 0;
+  color: rgba(0, 0, 0, 0.7);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.vision-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 32px;
+}
+
+.vision-card {
+  position: relative;
+  background-image: url('/images/home/mutawif/mutawif-1.webp');
+  background-size: cover;
+  background-position: center;
+  padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  transition: all 0.3s ease;
+  opacity: 0;
+  animation: fadeInUp 0.6s ease forwards;
+  overflow: hidden;
+}
+
+.vision-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.vision-card:nth-child(1) {
+  animation-delay: 0.1s;
+  background-image: url('/images/home/mutawif/mutawif-1.webp');
+}
+
+.vision-card:nth-child(2) {
+  animation-delay: 0.2s;
+  background-image: url('/images/home/mutawif/mutawif-2.webp');
+}
+
+.vision-card:hover::before {
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.vision-card:hover {
+  transform: translateY(-4px);
+}
+
+.vision-card > * {
+  position: relative;
+  z-index: 2;
+}
+
+.vision-card-type {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: 28px;
+  color: #e4bd49;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.vision-card-content {
+  font-family: var(--font-secondary);
+  font-size: 17px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0;
+}
+
+.vision-card-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.vision-card-list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  font-family: var(--font-secondary);
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.vision-bullet {
+  width: 8px;
+  height: 8px;
+  background: #e4bd49;
+  flex-shrink: 0;
+  margin-top: 9px;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vision-card {
+    animation: none;
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1024px) {
+  .vision-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .vision-section {
+    padding: clamp(48px, 12vw, 80px) clamp(16px, 6vw, 48px);
+  }
+
+  .vision-header {
+    margin-bottom: 40px;
+  }
+
+  .vision-grid {
+    gap: 24px;
+  }
+
+  .vision-card {
+    padding: 36px 28px;
+  }
+
+  .vision-card-type {
+    font-size: 24px;
+  }
+
+  .vision-card-content {
+    font-size: 16px;
+  }
+
+  .vision-card-list-item {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .vision-card {
+    padding: 32px 24px;
+    gap: 20px;
+  }
+
+  .vision-card-type {
+    font-size: 22px;
+  }
+
+  .vision-card-list {
+    gap: 14px;
+  }
+
+  .vision-card-list-item {
+    gap: 12px;
+  }
+}

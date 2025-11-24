@@ -1,0 +1,209 @@
+.organization-section {
+  padding: 100px 110px;
+  background: #ffffff;
+}
+
+.organization-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.organization-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.organization-subtitle {
+  font-family: var(--font-secondary);
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.6);
+  margin: 0 0 16px;
+}
+
+.organization-title {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: clamp(36px, 5vw, 48px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0 0 20px;
+  color: var(--black);
+}
+
+.organization-description {
+  font-family: var(--font-secondary);
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgba(0, 0, 0, 0.7);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.organization-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
+}
+
+.organization-card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  opacity: 0;
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.organization-card:nth-child(1) { animation-delay: 0.1s; }
+.organization-card:nth-child(2) { animation-delay: 0.2s; }
+.organization-card:nth-child(3) { animation-delay: 0.3s; }
+.organization-card:nth-child(4) { animation-delay: 0.4s; }
+
+.organization-card:hover {
+  transform: translateY(-8px);
+}
+
+.organization-card:hover .organization-card-overlay {
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+}
+
+.organization-card-image {
+  width: 100%;
+  height: 340px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.organization-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(0, 0, 0, 0.75) 100%
+  );
+  transition: all 0.3s ease;
+}
+
+.organization-card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 28px 24px;
+  z-index: 1;
+}
+
+.organization-position {
+  font-family: var(--font-secondary);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #e4bd49;
+  margin: 0 0 10px;
+}
+
+.organization-name {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 1.3;
+  color: #ffffff;
+  margin: 0;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .organization-card {
+    animation: none;
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1200px) {
+  .organization-section {
+    padding: 80px 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .organization-section {
+    padding: 60px 40px;
+  }
+
+  .organization-subtitle {
+    font-size: 13px;
+  }
+
+  .organization-description {
+    font-size: 15px;
+  }
+
+  .organization-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+  }
+
+  .organization-card-image {
+    height: 300px;
+  }
+
+  .organization-card-content {
+    padding: 24px 20px;
+  }
+
+  .organization-name {
+    font-size: 19px;
+  }
+}
+
+@media (max-width: 480px) {
+  .organization-section {
+    padding: 50px 24px;
+  }
+
+  .organization-subtitle {
+    font-size: 12px;
+    letter-spacing: 0.2em;
+  }
+
+  .organization-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .organization-card-image {
+    height: 320px;
+  }
+
+  .organization-card-content {
+    padding: 24px 20px;
+  }
+
+  .organization-position {
+    font-size: 12px;
+  }
+
+  .organization-name {
+    font-size: 18px;
+  }
+}

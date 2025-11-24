@@ -1,0 +1,253 @@
+.team-section {
+  padding: 100px 110px;
+  background: #f8f8f8;
+}
+
+.team-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.team-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.team-subtitle {
+  font-family: var(--font-secondary);
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.6);
+  margin: 0 0 16px;
+}
+
+.team-title {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: clamp(36px, 5vw, 48px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0 0 20px;
+  color: var(--black);
+}
+
+.team-description {
+  font-family: var(--font-secondary);
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgba(0, 0, 0, 0.7);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
+}
+
+.team-card {
+  background: #ffffff;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  opacity: 0;
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.team-card:nth-child(1) { animation-delay: 0.1s; }
+.team-card:nth-child(2) { animation-delay: 0.2s; }
+.team-card:nth-child(3) { animation-delay: 0.3s; }
+.team-card:nth-child(4) { animation-delay: 0.4s; }
+
+.team-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.team-card:hover .team-card-overlay {
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+}
+
+.team-card-image {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.team-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+  transition: all 0.3s ease;
+}
+
+.team-card-content {
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #ffffff;
+}
+
+.team-member-name {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 1.3;
+  color: var(--black);
+  margin: 0;
+}
+
+.team-member-role {
+  font-family: var(--font-secondary);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.6);
+  margin: 0;
+}
+
+.team-expertise {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  padding-top: 18px;
+  border-top: 2px solid rgba(228, 189, 73, 0.2);
+}
+
+.expertise-icon {
+  color: #e4bd49;
+  font-size: 17px;
+}
+
+.expertise-text {
+  font-family: var(--font-secondary);
+  font-size: 15px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .team-card {
+    animation: none;
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1200px) {
+  .team-section {
+    padding: 80px 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .team-section {
+    padding: 60px 40px;
+  }
+
+  .team-subtitle {
+    font-size: 13px;
+  }
+
+  .team-description {
+    font-size: 15px;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+  }
+
+  .team-card-image {
+    height: 280px;
+  }
+
+  .team-card-content {
+    padding: 24px 20px;
+  }
+
+  .team-member-name {
+    font-size: 19px;
+  }
+
+  .team-member-role {
+    font-size: 12px;
+  }
+
+  .expertise-text {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-section {
+    padding: 50px 24px;
+  }
+
+  .team-subtitle {
+    font-size: 12px;
+    letter-spacing: 0.2em;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .team-card-image {
+    height: 300px;
+  }
+
+  .team-card-content {
+    padding: 24px 20px;
+    gap: 8px;
+  }
+
+  .team-member-name {
+    font-size: 18px;
+  }
+
+  .team-member-role {
+    font-size: 11px;
+  }
+
+  .team-expertise {
+    margin-top: 8px;
+    padding-top: 16px;
+    gap: 8px;
+  }
+
+  .expertise-icon {
+    font-size: 15px;
+  }
+
+  .expertise-text {
+    font-size: 13px;
+  }
+}
