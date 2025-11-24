@@ -1,9 +1,10 @@
 import { useState, useEffect, useRef } from "react";
 import Button from "../../components/common/Button";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay } from "swiper/modules";
+import { Pagination, Autoplay, EffectFade } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/effect-fade";
 import "./Home.css";
 import "./css/HeroSection.css";
 import "./css/MutawifGoalSection.css";
@@ -44,7 +45,7 @@ const Home = () => {
       eyebrow: "Certified & Experienced Mutawif Guides",
       title: (
         <>
-          Mutawif Bersertifikat Berstandar Nasional
+          Sertifikat Berstandar Nasional
         </>
       ),
       subtitle:
@@ -250,7 +251,11 @@ const Home = () => {
       {/* ========= HERO SECTION ========= */}
       <section className="hero-section">
         <Swiper
-          modules={[Pagination, Autoplay]}
+          modules={[Pagination, Autoplay, EffectFade]}
+          effect="fade"
+          fadeEffect={{
+            crossFade: true,
+          }}
           pagination={{
             clickable: true,
             el: ".hero-pagination",
@@ -262,6 +267,32 @@ const Home = () => {
           loop={true}
           speed={1000}
           className="hero-swiper"
+          onSlideChangeTransitionStart={(swiper) => {
+            // Remove animation classes from all slides
+            const allSlides = swiper.slides;
+            allSlides.forEach((slide) => {
+              const content = slide.querySelector('.hero-content');
+              if (content) {
+                content.classList.remove('hero-animate');
+              }
+            });
+          }}
+          onSlideChangeTransitionEnd={(swiper) => {
+            // Add animation class to active slide
+            const activeSlide = swiper.slides[swiper.activeIndex];
+            const content = activeSlide?.querySelector('.hero-content');
+            if (content) {
+              content.classList.add('hero-animate');
+            }
+          }}
+          onInit={(swiper) => {
+            // Animate first slide on init
+            const activeSlide = swiper.slides[swiper.activeIndex];
+            const content = activeSlide?.querySelector('.hero-content');
+            if (content) {
+              content.classList.add('hero-animate');
+            }
+          }}
         >
           {heroSlides.map((slide, index) => (
             <SwiperSlide key={index}>
