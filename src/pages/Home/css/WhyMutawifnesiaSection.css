@@ -215,6 +215,11 @@
     padding: 80px 50px 120px;
   }
 
+  .why-mutawifnesia-card {
+    grid-template-columns: 240px 1fr;
+    gap: 0px;
+  }
+
   .why-mutawifnesia-content {
     grid-template-columns: 1fr;
     gap: 60px;
@@ -254,15 +259,17 @@
   }
 
   .why-mutawifnesia-title {
+    text-align: center;
     font-size: 36px;
   }
-
+  
   .why-mutawifnesia-subtitle {
+    text-align: center;
     font-size: 15px;
   }
 
   .why-mutawifnesia-list {
-    gap: 42px;
+    gap: 62px;
   }
 
   .why-mutawifnesia-card-image-wrapper {
