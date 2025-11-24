@@ -1,0 +1,183 @@
+{
+  "home": {
+    "hero": {
+      "slides": [
+        {
+          "eyebrow": "Professional Certification for Future Mutawif Indonesia",
+          "title": "Sertifikasi Mutawif Profesional",
+          "subtitle": "Bergabunglah dengan program sertifikasi mutawif profesional dan wujudkan impian membimbing jamaah Umrah & Haji",
+          "buttonText": "Gabung Sekarang"
+        },
+        {
+          "eyebrow": "Certified & Experienced Mutawif Guides",
+          "title": "Sertifikat Berstandar Nasional",
+          "subtitle": "Dapatkan sertifikasi resmi dari LSP AHLAN yang diakui BNSP dan Kementerian Haji & Umrah RI",
+          "buttonText": "Pelajari Lebih Lanjut"
+        },
+        {
+          "eyebrow": "Join The Professional Mutawif Community",
+          "title": "Bergabung dengan Komunitas Mutawif",
+          "subtitle": "Jalin networking dengan mutawif profesional di seluruh Indonesia dan tingkatkan karir di industri Umrah & Haji",
+          "buttonText": "Daftar Sekarang"
+        }
+      ]
+    },
+    "whatIsMutawif": {
+      "subtitle": "Pendamping Spiritual di Tanah Suci",
+      "title": "Apa Itu Mutawif",
+      "description": "Mutawif adalah <0>pembimbing ibadah Umrah & Haji</0> yang memastikan pelaksanaan ibadah sesuai <1>syariat Islam</1>. Dikenal juga sebagai <2>religious guide</2> yang mendampingi jamaah dari persiapan hingga pelaksanaan di <3>Tanah Suci</3>.",
+      "keypointsTitle": "Peran Utama Mutawif",
+      "keyPoints": [
+        "Pembimbing ibadah Umrah & Haji yang tersertifikasi",
+        "Memastikan pelaksanaan ibadah sesuai syariat Islam",
+        "Mendampingi jamaah dari persiapan hingga selesai",
+        "Memiliki kompetensi berstandar nasional (SKKNI)"
+      ]
+    },
+    "mutawifGoal": {
+      "title": "Tujuan Sertifikasi Mutawif",
+      "goals": [
+        {
+          "title": "Kompetensi",
+          "description": "Memberikan pengakuan resmi terhadap kompetensi pembimbing umrah."
+        },
+        {
+          "title": "Kualitas",
+          "description": "Menjamin kualitas layanan bimbingan ibadah."
+        },
+        {
+          "title": "Standar",
+          "description": "Mendukung standar mutu penyelenggaraan ibadah Umrah & Haji sesuai SKKNI (Standar Kompetensi Kerja Nasional Indonesia)."
+        },
+        {
+          "title": "Syarat",
+          "description": "Menjadi syarat profesionalitas kerja di biro travel haji dan umrah (PPIU dan PIHK)."
+        },
+        {
+          "title": "Visa & Iqamah",
+          "description": "Menerbitkan Visa & Iqamah sesuai pekerjaan seorang Mutawif legal di Saudi (Visa Amil - Umrah & Hajj Controller)"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Mulai Perjalanan Anda Menjadi Mutawif Profesional",
+      "subtitle": "Bergabunglah dengan program sertifikasi mutawif dan wujudkan impian membimbing jamaah Umrah & Haji",
+      "button": "Daftar Sekarang"
+    },
+    "whyMutawifnesia": {
+      "title": "Mengapa Mutawifnesia?",
+      "subtitle": "Platform terpercaya yang menghubungkan jamaah dengan mutawif bersertifikat untuk pengalaman ibadah yang berkualitas.",
+      "reasons": [
+        {
+          "title": "Platform Terpercaya",
+          "description": "Sistem terintegrasi yang menghubungkan mutawif tersertifikasi dengan jamaah umrah di seluruh Indonesia."
+        },
+        {
+          "title": "Mutawif Bersertifikat",
+          "description": "Semua mutawif telah memiliki sertifikasi resmi dan pengalaman mendalam dalam membimbing ibadah Umrah & Haji."
+        },
+        {
+          "title": "Proses Mudah & Cepat",
+          "description": "Pendaftaran online yang sederhana dengan verifikasi cepat untuk memudahkan jamaah menemukan mutawif terbaik."
+        },
+        {
+          "title": "Jaminan Kualitas",
+          "description": "Standar pelayanan tinggi dengan monitoring berkala untuk memastikan pengalaman ibadah yang khusyuk dan aman."
+        }
+      ]
+    },
+    "lembaga": {
+      "heading": ["Lembaga", "Penyelenggara", "Sertifikasi"],
+      "description": "Sertifikasi Mutawif dilaksanakan oleh LSP AHLAN, lembaga sertifikasi profesi yang telah mendapat lisensi dari Badan Nasional Sertifikasi Profesi (BNSP) dan memiliki skema sertifikasi yang disahkan oleh Kementerian Haji & Umrah RI.",
+      "highlightValue": "221K+",
+      "highlightTitle": "jamaah Umrah & Haji Tahunan",
+      "highlightCaption": "Dengan warga Indonesia yang membentuk salah satu kontingen nasional terbesar setiap tahunnya – ",
+      "linkText": "haji.go.id"
+    },
+    "requirements": {
+      "eyebrow": "Persyaratan Umum",
+      "heading": "Syarat Sertifikasi",
+      "description": "Calon mutawif wajib memenuhi persyaratan berikut sebagai komitmen terhadap profesionalisme dalam mendampingi jamaah Umrah & Haji dan umrah Indonesia.",
+      "list": [
+        "Beragama Islam.",
+        "Usia minimal 21 tahun.",
+        "Pendidikan minimal SMA/MA atau sederajat.",
+        "Mampu berkomunikasi dan membimbing jamaah.",
+        "Menyerahkan dokumen administrasi (KTP, ijazah, pas foto, CV, dan bukti pengalaman)."
+      ]
+    },
+    "process": {
+      "title": "Proses Sertifikasi",
+      "description": "Ikuti alur sertifikasi dari pendaftaran dan verifikasi berkas, asesmen mandiri, uji kompetensi, penetapan hasil hingga penerbitan sertifikat.",
+      "steps": [
+        "Pendaftaran dan Verifikasi Dokumen.",
+        "Asesmen Mandiri (Self Assessment).",
+        "Uji Kompetensi: observasi praktik/simulasi bimbingan, wawancara, dan tes pengetahuan.",
+        "Penetapan hasil: Kompeten / Belum Kompeten.",
+        "Penerbitan Sertifikat Kompetensi."
+      ]
+    },
+    "discover": {
+      "title": "Program Mutawifnesia",
+      "description": "Mutawifnesia menghadirkan program sertifikasi mutawif profesional dengan kurikulum eksklusif, mentor bersertifikat, dan pengalaman lapangan langsung di Tanah Suci.",
+      "cardSubtitle": "Program Sertifikasi",
+      "cardTitle": "Batch 1 Mutawifnesia 2025",
+      "features": [
+        "Kurikulum berbasis SKKNI dengan mentor praktisi ibadah",
+        "Simulasi bimbingan jamaah dan praktik lapangan terpandu",
+        "Sertifikasi resmi dari LSP AHLAN & BNSP"
+      ],
+      "badges": {
+        "date": "Januari 2026",
+        "duration": "1-2 Bulan",
+        "quota": "Kuota Terbatas"
+      },
+      "priceLabel": "Investasi Mulai",
+      "currency": "Rp",
+      "amount": "34.500.000",
+      "button": "Daftar Sekarang"
+    }
+  },
+  "about": {
+    "hero": {
+      "subtitle": "Mengenal Lebih Dekat",
+      "title": "Tentang Kami",
+      "description": "Lembaga sertifikasi profesi terpercaya untuk menghasilkan mutawif berkualitas tinggi melayani jamaah Indonesia"
+    },
+    "profile": {
+      "subtitle": "Profil Lembaga",
+      "title": "PT & LSP AHLAN",
+      "description1": "LSP AHLAN adalah <0>Lembaga Sertifikasi Profesi</0> yang berkomitmen untuk meningkatkan standar kompetensi mutawif di Indonesia. Kami bekerja sama dengan <1>Badan Nasional Sertifikasi Profesi (BNSP)</1> dan Kementerian Agama RI untuk menghasilkan pembimbing ibadah yang profesional dan kompeten.",
+      "description2": "Dengan pengalaman lebih dari 5 tahun, kami telah mensertifikasi ratusan mutawif yang kini aktif melayani jamaah di seluruh Indonesia dan Tanah Suci."
+    },
+    "vision": {
+      "mainTitle": "Visi dan Misi",
+      "mainDescription": "Fondasi yang mendasari setiap langkah kami dalam menghasilkan mutawif profesional untuk melayani jamaah Indonesia.",
+      "visionType": "Visi",
+      "visionContent": "Menjadi lembaga sertifikasi profesi terkemuka yang menghasilkan mutawif berkualitas tinggi untuk melayani jamaah Indonesia.",
+      "missionType": "Misi",
+      "missionItems": [
+        "Menyelenggarakan sertifikasi mutawif berstandar nasional dan internasional",
+        "Meningkatkan kompetensi pembimbing ibadah Umrah & Haji",
+        "Membangun ekosistem profesional dalam industri Umrah & Haji",
+        "Memberikan jaminan kualitas pelayanan kepada jamaah"
+      ]
+    },
+    "organization": {
+      "subtitle": "Kepemimpinan",
+      "title": "Struktur Organisasi",
+      "description": "Tim kepemimpinan yang berpengalaman dan berkomitmen untuk mengembangkan standar profesional mutawif Indonesia.",
+      "roles": {
+        "chairman": "Ketua LSP",
+        "secretary": "Sekretaris",
+        "treasurer": "Bendahara",
+        "coordinator": "Koordinator Asesor"
+      }
+    },
+    "cta": {
+      "title": "Siap Bergabung dengan Program Sertifikasi?",
+      "subtitle": "Mari bersama-sama meningkatkan kualitas pelayanan jamaah Umrah & Haji Indonesia",
+      "button": "Daftar Sekarang"
+    }
+  }
+}

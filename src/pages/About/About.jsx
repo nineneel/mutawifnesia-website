@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { useTranslation, Trans } from "react-i18next";
 import Button from "../../components/common/Button";
 import "./About.css";
 import "./css/ProfileSection.css";
@@ -6,46 +7,41 @@ import "./css/VisionSection.css";
 import "./css/OrganizationSection.css";
 
 const About = () => {
+  const { t } = useTranslation();
   const contentTextRef = useRef(null);
   const imageContainerRef = useRef(null);
 
   // Vision and Mission data
   const visionMissionValues = [
     {
-      type: "Visi",
-      content:
-        "Menjadi lembaga sertifikasi profesi terkemuka yang menghasilkan mutawif berkualitas tinggi untuk melayani jamaah Indonesia.",
+      type: t('about.vision.visionType'),
+      content: t('about.vision.visionContent'),
     },
     {
-      type: "Misi",
-      items: [
-        "Menyelenggarakan sertifikasi mutawif berstandar nasional dan internasional",
-        "Meningkatkan kompetensi pembimbing ibadah Umrah & Haji",
-        "Membangun ekosistem profesional dalam industri Umrah & Haji",
-        "Memberikan jaminan kualitas pelayanan kepada jamaah",
-      ],
+      type: t('about.vision.missionType'),
+      items: t('about.vision.missionItems', { returnObjects: true }),
     },
   ];
 
   // Organization structure data
   const organizationRoles = [
     {
-      position: "Ketua LSP",
+      position: t('about.organization.roles.chairman'),
       name: "Dr. Ahmad Hidayat, M.Si",
       image: "/images/home/mutawif/mutawif-1.webp",
     },
     {
-      position: "Sekretaris",
+      position: t('about.organization.roles.secretary'),
       name: "Dra. Siti Nurhaliza",
       image: "/images/home/mutawif/mutawif-2.webp",
     },
     {
-      position: "Bendahara",
+      position: t('about.organization.roles.treasurer'),
       name: "M. Rizki Pratama, S.E",
       image: "/images/home/mutawif/mutawif-3.webp",
     },
     {
-      position: "Koordinator Asesor",
+      position: t('about.organization.roles.coordinator'),
       name: "Prof. Dr. Abdullah Malik",
       image: "/images/home/mutawif/mutawif-4.webp",
     },
@@ -82,11 +78,10 @@ const About = () => {
         </div>
 
         <div className="about-hero-content">
-          <p className="about-hero-subtitle">Mengenal Lebih Dekat</p>
-          <h1 className="about-hero-title">Tentang Kami</h1>
+          <p className="about-hero-subtitle">{t('about.hero.subtitle')}</p>
+          <h1 className="about-hero-title">{t('about.hero.title')}</h1>
           <p className="about-hero-description">
-            Lembaga sertifikasi profesi terpercaya untuk menghasilkan mutawif
-            berkualitas tinggi melayani jamaah Indonesia
+            {t('about.hero.description')}
           </p>
         </div>
       </section>
@@ -97,22 +92,22 @@ const About = () => {
           <div className="profile-content">
             <div className="profile-text" ref={contentTextRef}>
               <div className="profile-header">
-                <p className="profile-subtitle">Profil Lembaga</p>
-                <h2 className="profile-title">PT & LSP AHLAN</h2>
+                <p className="profile-subtitle">{t('about.profile.subtitle')}</p>
+                <h2 className="profile-title">{t('about.profile.title')}</h2>
               </div>
 
               <p className="profile-description">
-                LSP AHLAN adalah <span className="highlight">Lembaga Sertifikasi Profesi</span> yang berkomitmen untuk
-                meningkatkan standar kompetensi mutawif di Indonesia. Kami
-                bekerja sama dengan <span className="highlight">Badan Nasional Sertifikasi Profesi (BNSP)</span> dan
-                Kementerian Agama RI untuk menghasilkan pembimbing ibadah yang
-                profesional dan kompeten.
+                <Trans
+                  i18nKey="about.profile.description1"
+                  components={{
+                    0: <span className="highlight" />,
+                    1: <span className="highlight" />
+                  }}
+                />
               </p>
 
               <p className="profile-description">
-                Dengan pengalaman lebih dari 5 tahun, kami telah mensertifikasi
-                ratusan mutawif yang kini aktif melayani jamaah di seluruh
-                Indonesia dan Tanah Suci.
+                {t('about.profile.description2')}
               </p>
             </div>
 
@@ -135,10 +130,9 @@ const About = () => {
       <section className="vision-section">
         <div className="vision-container">
           <div className="vision-header">
-            <h2 className="vision-main-title">Visi dan Misi</h2>
+            <h2 className="vision-main-title">{t('about.vision.mainTitle')}</h2>
             <p className="vision-main-description">
-              Fondasi yang mendasari setiap langkah kami dalam menghasilkan
-              mutawif profesional untuk melayani jamaah Indonesia.
+              {t('about.vision.mainDescription')}
             </p>
           </div>
 
@@ -168,11 +162,10 @@ const About = () => {
       <section className="organization-section">
         <div className="organization-container">
           <div className="organization-header">
-            <p className="organization-subtitle">Kepemimpinan</p>
-            <h2 className="organization-title">Struktur Organisasi</h2>
+            <p className="organization-subtitle">{t('about.organization.subtitle')}</p>
+            <h2 className="organization-title">{t('about.organization.title')}</h2>
             <p className="organization-description">
-              Tim kepemimpinan yang berpengalaman dan berkomitmen untuk
-              mengembangkan standar profesional mutawif Indonesia.
+              {t('about.organization.description')}
             </p>
           </div>
 
@@ -199,14 +192,13 @@ const About = () => {
       <section className="about-cta-section">
         <div className="about-cta-container">
           <h2 className="about-cta-title">
-            Siap Bergabung dengan Program Sertifikasi?
+            {t('about.cta.title')}
           </h2>
           <p className="about-cta-subtitle">
-            Mari bersama-sama meningkatkan kualitas pelayanan jamaah Umrah &
-            Haji Indonesia
+            {t('about.cta.subtitle')}
           </p>
           <Button to="/join" variant="primary" size="large">
-            Daftar Sekarang
+            {t('about.cta.button')}
           </Button>
         </div>
       </section>

@@ -1,0 +1,183 @@
+{
+  "home": {
+    "hero": {
+      "slides": [
+        {
+          "eyebrow": "Professional Certification for Future Mutawif Indonesia",
+          "title": "Professional Mutawif Certification",
+          "subtitle": "Join the professional mutawif certification program and realize your dream of guiding Umrah & Hajj pilgrims",
+          "buttonText": "Join Now"
+        },
+        {
+          "eyebrow": "Certified & Experienced Mutawif Guides",
+          "title": "National Standard Certificate",
+          "subtitle": "Get official certification from LSP AHLAN recognized by BNSP and the Ministry of Hajj & Umrah RI",
+          "buttonText": "Learn More"
+        },
+        {
+          "eyebrow": "Join The Professional Mutawif Community",
+          "title": "Join the Mutawif Community",
+          "subtitle": "Build networking with professional mutawif throughout Indonesia and advance your career in the Umrah & Hajj industry",
+          "buttonText": "Register Now"
+        }
+      ]
+    },
+    "whatIsMutawif": {
+      "subtitle": "Spiritual Companion in the Holy Land",
+      "title": "What is Mutawif",
+      "description": "Mutawif is an <0>Umrah & Hajj worship guide</0> who ensures worship is performed according to <1>Islamic law</1>. Also known as a <2>religious guide</2> who accompanies pilgrims from preparation to implementation in the <3>Holy Land</3>.",
+      "keypointsTitle": "Main Role of Mutawif",
+      "keyPoints": [
+        "Certified Umrah & Hajj worship guide",
+        "Ensuring worship is performed according to Islamic law",
+        "Accompanying pilgrims from preparation to completion",
+        "Having national standard competency (SKKNI)"
+      ]
+    },
+    "mutawifGoal": {
+      "title": "Purpose of Mutawif Certification",
+      "goals": [
+        {
+          "title": "Competency",
+          "description": "Providing official recognition of umrah guide competency."
+        },
+        {
+          "title": "Quality",
+          "description": "Ensuring the quality of worship guidance services."
+        },
+        {
+          "title": "Standards",
+          "description": "Supporting quality standards for organizing Umrah & Hajj worship according to SKKNI (Indonesian National Work Competency Standards)."
+        },
+        {
+          "title": "Requirements",
+          "description": "Becoming a work professionalism requirement at hajj and umrah travel agencies (PPIU and PIHK)."
+        },
+        {
+          "title": "Visa & Iqamah",
+          "description": "Issuing Visa & Iqamah according to the legal Mutawif job in Saudi (Visa Amil - Umrah & Hajj Controller)"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Start Your Journey to Become a Professional Mutawif",
+      "subtitle": "Join the mutawif certification program and realize your dream of guiding Umrah & Hajj pilgrims",
+      "button": "Register Now"
+    },
+    "whyMutawifnesia": {
+      "title": "Why Mutawifnesia?",
+      "subtitle": "A trusted platform that connects pilgrims with certified mutawif for a quality worship experience.",
+      "reasons": [
+        {
+          "title": "Trusted Platform",
+          "description": "An integrated system that connects certified mutawif with umrah pilgrims throughout Indonesia."
+        },
+        {
+          "title": "Certified Mutawif",
+          "description": "All mutawif have official certification and extensive experience in guiding Umrah & Hajj worship."
+        },
+        {
+          "title": "Easy & Fast Process",
+          "description": "Simple online registration with fast verification to make it easier for pilgrims to find the best mutawif."
+        },
+        {
+          "title": "Quality Guarantee",
+          "description": "High service standards with regular monitoring to ensure a reverent and safe worship experience."
+        }
+      ]
+    },
+    "lembaga": {
+      "heading": ["Certification", "Organizing", "Institution"],
+      "description": "Mutawif Certification is conducted by LSP AHLAN, a professional certification institution licensed by the National Professional Certification Board (BNSP) and has a certification scheme validated by the Ministry of Hajj & Umrah RI.",
+      "highlightValue": "221K+",
+      "highlightTitle": "Annual Umrah & Hajj Pilgrims",
+      "highlightCaption": "With Indonesian citizens forming one of the largest national contingents each year – ",
+      "linkText": "haji.go.id"
+    },
+    "requirements": {
+      "eyebrow": "General Requirements",
+      "heading": "Certification Requirements",
+      "description": "Prospective mutawif must meet the following requirements as a commitment to professionalism in accompanying Indonesian Umrah & Hajj and umrah pilgrims.",
+      "list": [
+        "Muslim religion.",
+        "Minimum age of 21 years.",
+        "Minimum education of high school/MA or equivalent.",
+        "Able to communicate and guide pilgrims.",
+        "Submit administrative documents (ID card, diploma, passport photo, CV, and proof of experience)."
+      ]
+    },
+    "process": {
+      "title": "Certification Process",
+      "description": "Follow the certification flow from registration and document verification, self-assessment, competency test, result determination to certificate issuance.",
+      "steps": [
+        "Registration and Document Verification.",
+        "Self Assessment.",
+        "Competency Test: practice/simulation observation of guidance, interview, and knowledge test.",
+        "Result determination: Competent / Not Yet Competent.",
+        "Issuance of Competency Certificate."
+      ]
+    },
+    "discover": {
+      "title": "Mutawifnesia Program",
+      "description": "Mutawifnesia presents a professional mutawif certification program with an exclusive curriculum, certified mentors, and direct field experience in the Holy Land.",
+      "cardSubtitle": "Certification Program",
+      "cardTitle": "Mutawifnesia Batch 1 2025",
+      "features": [
+        "SKKNI-based curriculum with worship practitioner mentors",
+        "Pilgrim guidance simulation and guided field practice",
+        "Official certification from LSP AHLAN & BNSP"
+      ],
+      "badges": {
+        "date": "January 2026",
+        "duration": "1-2 Months",
+        "quota": "Limited Quota"
+      },
+      "priceLabel": "Investment Starting From",
+      "currency": "IDR",
+      "amount": "34,500,000",
+      "button": "Register Now"
+    }
+  },
+  "about": {
+    "hero": {
+      "subtitle": "Get to Know Us Better",
+      "title": "About Us",
+      "description": "Trusted professional certification institution for producing high-quality mutawif to serve Indonesian pilgrims"
+    },
+    "profile": {
+      "subtitle": "Institution Profile",
+      "title": "PT & LSP AHLAN",
+      "description1": "LSP AHLAN is a <0>Professional Certification Institution</0> committed to improving the competency standards of mutawif in Indonesia. We collaborate with the <1>National Professional Certification Board (BNSP)</1> and the Ministry of Religious Affairs of the Republic of Indonesia to produce professional and competent worship guides.",
+      "description2": "With more than 5 years of experience, we have certified hundreds of mutawif who are now actively serving pilgrims throughout Indonesia and the Holy Land."
+    },
+    "vision": {
+      "mainTitle": "Vision and Mission",
+      "mainDescription": "The foundation that underlies our every step in producing professional mutawif to serve Indonesian pilgrims.",
+      "visionType": "Vision",
+      "visionContent": "To become a leading professional certification institution that produces high-quality mutawif to serve Indonesian pilgrims.",
+      "missionType": "Mission",
+      "missionItems": [
+        "Organizing mutawif certification with national and international standards",
+        "Improving the competency of Umrah & Hajj worship guides",
+        "Building a professional ecosystem in the Umrah & Hajj industry",
+        "Providing quality service guarantees to pilgrims"
+      ]
+    },
+    "organization": {
+      "subtitle": "Leadership",
+      "title": "Organization Structure",
+      "description": "An experienced leadership team committed to developing professional standards for Indonesian mutawif.",
+      "roles": {
+        "chairman": "LSP Chairman",
+        "secretary": "Secretary",
+        "treasurer": "Treasurer",
+        "coordinator": "Assessor Coordinator"
+      }
+    },
+    "cta": {
+      "title": "Ready to Join the Certification Program?",
+      "subtitle": "Let's work together to improve the quality of Umrah & Hajj pilgrim services in Indonesia",
+      "button": "Register Now"
+    }
+  }
+}

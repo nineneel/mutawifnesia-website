@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { useTranslation, Trans } from "react-i18next";
 import Button from "../../components/common/Button";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay, EffectFade } from "swiper/modules";
@@ -18,6 +19,7 @@ import "./css/DiscoverSection.css";
 import "./css/JoinCtaSection.css";
 
 const Home = () => {
+  const { t } = useTranslation();
   const [bgColor, setBgColor] = useState("#ffffff");
   const [textColor, setTextColor] = useState("#1A1A1A");
   const [isDarkBg, setIsDarkBg] = useState(false);
@@ -26,152 +28,103 @@ const Home = () => {
   const imageContainerRef = useRef(null);
 
   // Hero slider content
+  const heroSlidesData = t('home.hero.slides', { returnObjects: true });
   const heroSlides = [
     {
       image: "/images/hero-bg.jpg",
-      eyebrow: "Professional Certification for Future Mutawif Indonesia",
-      title: (
-        <>
-          Sertifikasi Mutawif Profesional
-        </>
-      ),
-      subtitle:
-        "Bergabunglah dengan program sertifikasi mutawif profesional dan wujudkan impian membimbing jamaah Umrah & Haji",
-      buttonText: "Gabung Sekarang",
+      ...heroSlidesData[0],
       buttonLink: "/join",
     },
     {
       image: "/images/home/mutawif/mutawif-2.webp",
-      eyebrow: "Certified & Experienced Mutawif Guides",
-      title: (
-        <>
-          Sertifikat Berstandar Nasional
-        </>
-      ),
-      subtitle:
-        "Dapatkan sertifikasi resmi dari LSP AHLAN yang diakui BNSP dan Kementerian Haji & Umrah RI",
-      buttonText: "Pelajari Lebih Lanjut",
+      ...heroSlidesData[1],
       buttonLink: "/join",
     },
     {
       image: "/images/home/mutawif/mutawif-4.webp",
-      eyebrow: "Join The Professional Mutawif Community",
-      title: (
-        <>
-          Bergabung dengan Komunitas Mutawif
-        </>
-      ),
-      subtitle:
-        "Jalin networking dengan mutawif profesional di seluruh Indonesia dan tingkatkan karir di industri Umrah & Haji",
-      buttonText: "Daftar Sekarang",
+      ...heroSlidesData[2],
       buttonLink: "/join",
     },
   ];
 
   // Key points for What is Mutawif section
-  const keyPoints = [
-    "Pembimbing ibadah Umrah & Haji yang tersertifikasi",
-    "Memastikan pelaksanaan ibadah sesuai syariat Islam",
-    "Mendampingi jamaah dari persiapan hingga selesai",
-    "Memiliki kompetensi berstandar nasional (SKKNI)",
-  ];
+  const keyPoints = t('home.whatIsMutawif.keyPoints', { returnObjects: true });
 
   // Goals for Mutawif Purpose section
+  const certificationGoalsData = t('home.mutawifGoal.goals', { returnObjects: true });
   const certificationGoals = [
     {
       icon: "/images/home/mutawif/mutawif-1.webp",
-      title: "Kompetensi",
-      description:
-        "Memberikan pengakuan resmi terhadap kompetensi pembimbing umrah.",
+      ...certificationGoalsData[0],
     },
     {
       icon: "/images/home/mutawif/mutawif-2.webp",
-      title: "Kualitas",
-      description: "Menjamin kualitas layanan bimbingan ibadah.",
+      ...certificationGoalsData[1],
     },
     {
       icon: "/images/home/mutawif/mutawif-3.webp",
-      title: "Standar",
-      description:
-        "Mendukung standar mutu penyelenggaraan ibadah Umrah & Haji sesuai SKKNI (Standar Kompetensi Kerja Nasional Indonesia).",
+      ...certificationGoalsData[2],
     },
     {
       icon: "/images/home/mutawif/mutawif-4.webp",
-      title: "Syarat",
-      description:
-        "Menjadi syarat profesionalitas kerja di biro travel haji dan umrah (PPIU dan PIHK).",
+      ...certificationGoalsData[3],
     },
     {
       icon: "/images/home/mutawif/mutawif-1.webp",
-      title: "Visa & Iqamah",
-      description:
-        "Menerbitkan Visa & Iqamah sesuai pekerjaan seorang Mutawif legal di Saudi (Visa Amil - Umrah & Hajj Controller)",
+      ...certificationGoalsData[4],
     },
   ];
 
   // Why choose us for Why Mutawifnesia section
+  const whyChooseUsData = t('home.whyMutawifnesia.reasons', { returnObjects: true });
   const whyChooseUs = [
     {
       number: "01",
-      title: "Platform Terpercaya",
-      description:
-        "Sistem terintegrasi yang menghubungkan mutawif tersertifikasi dengan jamaah umrah di seluruh Indonesia.",
+      ...whyChooseUsData[0],
       image: "/images/home/mutawif/mutawif-1.webp",
     },
     {
       number: "02",
-      title: "Mutawif Bersertifikat",
-      description:
-        "Semua mutawif telah memiliki sertifikasi resmi dan pengalaman mendalam dalam membimbing ibadah Umrah & Haji.",
+      ...whyChooseUsData[1],
       image: "/images/home/mutawif/mutawif-2.webp",
     },
     {
       number: "03",
-      title: "Proses Mudah & Cepat",
-      description:
-        "Pendaftaran online yang sederhana dengan verifikasi cepat untuk memudahkan jamaah menemukan mutawif terbaik.",
+      ...whyChooseUsData[2],
       image: "/images/home/mutawif/mutawif-3.webp",
     },
     {
       number: "04",
-      title: "Jaminan Kualitas",
-      description:
-        "Standar pelayanan tinggi dengan monitoring berkala untuk memastikan pengalaman ibadah yang khusyuk dan aman.",
+      ...whyChooseUsData[3],
       image: "/images/home/mutawif/mutawif-4.webp",
     },
   ];
 
   // Requirements for Requirements section
-  const requirements = [
-    "Beragama Islam.",
-    "Usia minimal 21 tahun.",
-    "Pendidikan minimal SMA/MA atau sederajat.",
-    "Mampu berkomunikasi dan membimbing jamaah.",
-    "Menyerahkan dokumen administrasi (KTP, ijazah, pas foto, CV, dan bukti pengalaman).",
-  ];
+  const requirements = t('home.requirements.list', { returnObjects: true });
 
   // Steps for Process section
+  const stepsData = t('home.process.steps', { returnObjects: true });
   const steps = [
     {
       number: "01",
-      title: "Pendaftaran dan Verifikasi Dokumen.",
+      title: stepsData[0],
     },
     {
       number: "02",
-      title: "Asesmen Mandiri (Self Assessment).",
+      title: stepsData[1],
     },
     {
       number: "03",
-      title:
-        "Uji Kompetensi: observasi praktik/simulasi bimbingan, wawancara, dan tes pengetahuan.",
+      title: stepsData[2],
     },
     {
       number: "04",
-      title: "Penetapan hasil: Kompeten / Belum Kompeten.",
+      title: stepsData[3],
     },
     {
       number: "05",
-      title: "Penerbitan Sertifikat Kompetensi.",
+      title: stepsData[4],
     },
   ];
 
@@ -325,24 +278,24 @@ const Home = () => {
           <div className="content-row">
             <div className="content-text" ref={contentTextRef}>
               <div className="content-header">
-                <p className="subtitle">Pendamping Spiritual di Tanah Suci</p>
-                <h2 className="title">Apa Itu Mutawif</h2>
+                <p className="subtitle">{t('home.whatIsMutawif.subtitle')}</p>
+                <h2 className="title">{t('home.whatIsMutawif.title')}</h2>
               </div>
 
               <p className="description">
-                Mutawif adalah{" "}
-                <span className="highlight">
-                  pembimbing ibadah Umrah & Haji
-                </span>{" "}
-                yang memastikan pelaksanaan ibadah sesuai{" "}
-                <span className="highlight">syariat Islam</span>. Dikenal juga
-                sebagai <span className="highlight">religious guide</span> yang
-                mendampingi jamaah dari persiapan hingga pelaksanaan di{" "}
-                <span className="highlight">Tanah Suci</span>.
+                <Trans
+                  i18nKey="home.whatIsMutawif.description"
+                  components={{
+                    0: <span className="highlight" />,
+                    1: <span className="highlight" />,
+                    2: <span className="highlight" />,
+                    3: <span className="highlight" />
+                  }}
+                />
               </p>
 
               <div className="content-keypoints">
-                <h3 className="keypoints-title">Peran Utama Mutawif</h3>
+                <h3 className="keypoints-title">{t('home.whatIsMutawif.keypointsTitle')}</h3>
 
                 <div className="key-points">
                   {keyPoints.map((point, index) => (
@@ -377,7 +330,7 @@ const Home = () => {
       {/* ========= MUTAWIF PURPOSE SECTION ========= */}
       <section className="mutawif-goal-section">
         <div className="mutawif-goal-container">
-          <h2 className="mutawif-goal-title">Tujuan Sertifikasi Mutawif</h2>
+          <h2 className="mutawif-goal-title">{t('home.mutawifGoal.title')}</h2>
           <div className="mutawif-goal-grid">
             {certificationGoals.map((goal, index) => (
               <div
@@ -403,14 +356,13 @@ const Home = () => {
       <section className="cta-section">
         <div className="cta-container">
           <h2 className="cta-title">
-            Mulai Perjalanan Anda Menjadi Mutawif Profesional
+            {t('home.cta.title')}
           </h2>
           <p className="cta-subtitle">
-            Bergabunglah dengan program sertifikasi mutawif dan wujudkan impian
-            membimbing jamaah Umrah & Haji
+            {t('home.cta.subtitle')}
           </p>
           <Button variant="primary" size="large">
-            Daftar Sekarang
+            {t('home.cta.button')}
           </Button>
         </div>
       </section>
@@ -420,10 +372,9 @@ const Home = () => {
         <div className="why-mutawifnesia-content">
           <div className="why-mutawifnesia-header-container">
             <div className="why-mutawifnesia-header">
-              <h2 className="why-mutawifnesia-title">Mengapa Mutawifnesia?</h2>
+              <h2 className="why-mutawifnesia-title">{t('home.whyMutawifnesia.title')}</h2>
               <p className="why-mutawifnesia-subtitle">
-                Platform terpercaya yang menghubungkan jamaah dengan mutawif
-                bersertifikat untuk pengalaman ibadah yang berkualitas.
+                {t('home.whyMutawifnesia.subtitle')}
               </p>
             </div>
           </div>
@@ -465,34 +416,30 @@ const Home = () => {
 
           <div className="lembaga-copy">
             <h2 className="lembaga-heading">
-              <span>Lembaga</span>
-              <span>Penyelenggara</span>
-              <span>Sertifikasi</span>
+              {t('home.lembaga.heading', { returnObjects: true }).map((text, idx) => (
+                <span key={idx}>{text}</span>
+              ))}
             </h2>
 
             <p className="lembaga-description">
-              Sertifikasi Mutawif dilaksanakan oleh LSP AHLAN, lembaga
-              sertifikasi profesi yang telah mendapat lisensi dari Badan
-              Nasional Sertifikasi Profesi (BNSP) dan memiliki skema sertifikasi
-              yang disahkan oleh Kementerian Haji &amp; Umrah RI.
+              {t('home.lembaga.description')}
             </p>
 
             <div className="lembaga-highlight">
-              <p className="lembaga-highlight-value">221K+</p>
+              <p className="lembaga-highlight-value">{t('home.lembaga.highlightValue')}</p>
               <div className="lembaga-highlight-text">
                 <p className="lembaga-highlight-title">
-                  jamaah Umrah & Haji Tahunan
+                  {t('home.lembaga.highlightTitle')}
                 </p>
                 <p className="lembaga-highlight-caption">
-                  Dengan warga Indonesia yang membentuk salah satu kontingen
-                  nasional terbesar setiap tahunnya –{" "}
+                  {t('home.lembaga.highlightCaption')}
                   <a
                     href="https://haji.go.id"
                     className="lembaga-link"
                     target="_blank"
                     rel="noreferrer"
                   >
-                    haji.go.id
+                    {t('home.lembaga.linkText')}
                   </a>
                 </p>
               </div>
@@ -506,12 +453,10 @@ const Home = () => {
         <div className="requirements-inner">
           <div className="requirements-copy">
             <div className="requirements-header">
-              <p className="requirements-eyebrow">Persyaratan Umum</p>
-              <h2 className="requirements-heading">Syarat Sertifikasi</h2>
+              <p className="requirements-eyebrow">{t('home.requirements.eyebrow')}</p>
+              <h2 className="requirements-heading">{t('home.requirements.heading')}</h2>
               <p className="requirements-description">
-                Calon mutawif wajib memenuhi persyaratan berikut sebagai
-                komitmen terhadap profesionalisme dalam mendampingi jamaah Umrah
-                & Haji dan umrah Indonesia.
+                {t('home.requirements.description')}
               </p>
             </div>
 
@@ -563,11 +508,9 @@ const Home = () => {
       {/* ========= PROCESS SECTION ========= */}
       <section className="process-section">
         <div className="process-header">
-          <h2 className="process-title">Proses Sertifikasi</h2>
+          <h2 className="process-title">{t('home.process.title')}</h2>
           <p className="process-description">
-            Ikuti alur sertifikasi dari pendaftaran dan verifikasi berkas,
-            asesmen mandiri, uji kompetensi, penetapan hasil hingga penerbitan
-            sertifikat.
+            {t('home.process.description')}
           </p>
         </div>
 
@@ -613,11 +556,9 @@ const Home = () => {
       {/* ========= DISCOVER SECTION ========= */}
       <section className="discover-section">
         <div className="discover-header">
-          <h2 className="discover-title">Program Mutawifnesia</h2>
+          <h2 className="discover-title">{t('home.discover.title')}</h2>
           <p className="discover-description">
-            Mutawifnesia menghadirkan program sertifikasi mutawif profesional
-            dengan kurikulum eksklusif, mentor bersertifikat, dan pengalaman
-            lapangan langsung di Tanah Suci.
+            {t('home.discover.description')}
           </p>
         </div>
 
@@ -631,101 +572,41 @@ const Home = () => {
           </div>
 
           <div className="card-content">
-            <p className="card-subtitle">Program Sertifikasi</p>
-            <h3 className="card-title">Batch 1 Mutawifnesia 2025</h3>
+            <p className="card-subtitle">{t('home.discover.cardSubtitle')}</p>
+            <h3 className="card-title">{t('home.discover.cardTitle')}</h3>
 
             <ul className="package-features">
-              <li>
-                <div className="check-icon">
-                  <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true"
-                  >
-                    <circle
-                      cx="12"
-                      cy="12"
-                      r="11"
-                      fill="#E4BD49"
-                      stroke="#E4BD49"
-                      strokeWidth="2"
-                    />
-                    <path
-                      d="M8.5 12.5L11 15L16 9"
-                      stroke="white"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </div>
-                <span>
-                  Kurikulum berbasis SKKNI dengan mentor praktisi ibadah
-                </span>
-              </li>
-              <li>
-                <div className="check-icon">
-                  <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true"
-                  >
-                    <circle
-                      cx="12"
-                      cy="12"
-                      r="11"
-                      fill="#E4BD49"
-                      stroke="#E4BD49"
-                      strokeWidth="2"
-                    />
-                    <path
-                      d="M8.5 12.5L11 15L16 9"
-                      stroke="white"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </div>
-                <span>
-                  Simulasi bimbingan jamaah dan praktik lapangan terpandu
-                </span>
-              </li>
-              <li>
-                <div className="check-icon">
-                  <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true"
-                  >
-                    <circle
-                      cx="12"
-                      cy="12"
-                      r="11"
-                      fill="#E4BD49"
-                      stroke="#E4BD49"
-                      strokeWidth="2"
-                    />
-                    <path
-                      d="M8.5 12.5L11 15L16 9"
-                      stroke="white"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </div>
-                <span>Sertifikasi resmi dari LSP AHLAN &amp; BNSP</span>
-              </li>
+              {t('home.discover.features', { returnObjects: true }).map((feature, index) => (
+                <li key={index}>
+                  <div className="check-icon">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                    >
+                      <circle
+                        cx="12"
+                        cy="12"
+                        r="11"
+                        fill="#E4BD49"
+                        stroke="#E4BD49"
+                        strokeWidth="2"
+                      />
+                      <path
+                        d="M8.5 12.5L11 15L16 9"
+                        stroke="white"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </div>
+                  <span>{feature}</span>
+                </li>
+              ))}
             </ul>
 
             <div className="package-info">
@@ -762,7 +643,7 @@ const Home = () => {
                       strokeLinecap="round"
                     />
                   </svg>
-                  <span>Januari 2026</span>
+                  <span>{t('home.discover.badges.date')}</span>
                 </div>
                 <div className="info-badge">
                   <svg
@@ -788,7 +669,7 @@ const Home = () => {
                       strokeLinejoin="round"
                     />
                   </svg>
-                  <span>1-2 Bulan</span>
+                  <span>{t('home.discover.badges.duration')}</span>
                 </div>
                 <div className="info-badge">
                   <svg
@@ -813,20 +694,20 @@ const Home = () => {
                     />
                     <circle cx="12" cy="17" r="1" fill="#E4BD49" />
                   </svg>
-                  <span>Kuota Terbatas</span>
+                  <span>{t('home.discover.badges.quota')}</span>
                 </div>
               </div>
 
               <div className="package-price">
-                <p className="price-label">Investasi Mulai</p>
+                <p className="price-label">{t('home.discover.priceLabel')}</p>
                 <p className="price-amount">
-                  <span className="currency">Rp</span>
-                  <span className="amount">34.500.000</span>
+                  <span className="currency">{t('home.discover.currency')}</span>
+                  <span className="amount">{t('home.discover.amount')}</span>
                 </p>
               </div>
 
               <Button variant="primary" size="medium">
-                Daftar Sekarang
+                {t('home.discover.button')}
               </Button>
             </div>
           </div>
@@ -837,14 +718,13 @@ const Home = () => {
       <section className="cta-section cta-bottom">
         <div className="cta-container">
           <h2 className="cta-title">
-            Mulai Perjalanan Anda Menjadi Mutawif Profesional
+            {t('home.cta.title')}
           </h2>
           <p className="cta-subtitle">
-            Bergabunglah dengan program sertifikasi mutawif dan wujudkan impian
-            membimbing jamaah Umrah & Haji
+            {t('home.cta.subtitle')}
           </p>
           <Button variant="primary" size="large">
-            Daftar Sekarang
+            {t('home.cta.button')}
           </Button>
         </div>
       </section>

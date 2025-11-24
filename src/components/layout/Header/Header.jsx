@@ -1,6 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import Button from '../../common/Button';
+import LanguageSwitcher from '../../common/LanguageSwitcher';
 import './Header.css';
 
 const Header = () => {
@@ -53,6 +54,7 @@ const Header = () => {
   return (
     <header className={`header ${isScrolled ? 'header-scrolled' : ''} ${isMenuOpen ? 'menu-open' : ''}`}>
       <div className="header-container">
+        {/* Section 1 */}
         <Link to="/" className="logo">
           <img src="/logo.png" alt="Mutawifnesia Logo" className="logo-image" />
           <h1 className="logo-text">Mutawifnesia</h1>
@@ -70,6 +72,7 @@ const Header = () => {
           <span />
         </button>
         <div className={`nav-wrapper ${isMenuOpen ? 'open' : ''}`}>
+          {/* Section 2 */}
           <nav id="primary-navigation" className="nav">
             <Link to="/" className={`nav-link ${isActive('/') ? 'active' : ''}`} onClick={handleNavLinkClick}>
               Home
@@ -80,10 +83,15 @@ const Header = () => {
             <Link to="/obligation" className={`nav-link ${isActive('/obligasi') ? 'active' : ''}`} onClick={handleNavLinkClick}>
               Obligasi
             </Link>
+            <LanguageSwitcher />
           </nav>
-          <Button to="/join" variant="primary" size="small" className="nav-cta">
-            Gabung Sekarang
-          </Button>
+
+          {/* Section 3 */}
+          <div className="nav-actions">
+            <Button to="/join" variant="primary" size="small" className="nav-cta">
+              Gabung Sekarang
+            </Button>
+          </div>
         </div>
       </div>
     </header>
