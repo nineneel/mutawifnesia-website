@@ -95,7 +95,7 @@
 }
 
 .hero-button:hover {
-  background-color: var(--secondary-dark);
+  background-color: var(--secondary-color);
   color: var(--headings-black);
   transform: translateY(-2px);
   box-shadow: 0 6px 24px rgba(228, 189, 73, 0.4);

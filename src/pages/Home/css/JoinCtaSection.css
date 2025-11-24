@@ -9,7 +9,7 @@
   max-width: 1020px;
   height: 309px;
   margin: 0 auto;
-  background: linear-gradient(135deg, var(--primary-red-dark) 0%, var(--primary-color) 100%);
+  background: linear-gradient(135deg, var(--primary-bg-dark) 0%, var(--primary-color) 100%);
   border-radius: 24px;
   display: flex;
   align-items: center;
@@ -76,7 +76,7 @@
 }
 
 .join-cta-button:hover {
-  background-color: var(--secondary-dark);
+  background-color: var(--secondary-color);
   color: var(--headings-black);
   transform: translateY(-2px);
   box-shadow: 0 4px 16px rgba(228, 189, 73, 0.4);

@@ -29,7 +29,7 @@
 }
 
 .header-scrolled .header-container {
-  background-color: #1a1a1a;
+  background-color: var(--primary-bg-dark);
   box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.5);
 }
 
@@ -49,7 +49,7 @@
 .logo-text {
   font-size: 18px;
   line-height: 18px;
-  color: #1a1a1a;
+  color: var(--primary-bg-dark);
   margin: 0;
   font-weight: var(--font-weight-bold);
   white-space: nowrap;
@@ -78,7 +78,7 @@
 }
 
 .nav-link {
-  color: #1a1a1a;
+  color: var(--primary-bg-dark);
   font-weight: var(--font-weight-normal);
   font-size: 14px;
   line-height: 16px;
@@ -99,14 +99,14 @@
 }
 
 .nav-link.active {
-  background-color: #1a1a1a;
+  background-color: var(--primary-bg-dark);
   color: var(--white);
   font-weight: var(--font-weight-medium);
 }
 
 .header-scrolled .nav-link.active {
   background-color: var(--white);
-  color: #1a1a1a;
+  color: var(--primary-bg-dark);
 }
 
 .cta-button {
@@ -154,7 +154,7 @@
 .menu-toggle span {
   width: 22px;
   height: 2px;
-  background-color: #1a1a1a;
+  background-color: var(--primary-bg-dark);
   transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
 }
 
@@ -218,7 +218,7 @@
   }
 
   .header-scrolled .nav-wrapper {
-    background-color: #1a1a1a;
+    background-color: var(--primary-bg-dark);
   }
 
   .nav-wrapper.open {
@@ -254,7 +254,7 @@
 
 /* Home background awareness */
 body[data-home-bg='light'] .header.header-scrolled .header-container {
-  background-color: #1a1a1a;
+  background-color: var(--primary-bg-dark);
   box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.5);
 }
 
@@ -269,7 +269,7 @@ body[data-home-bg='light'] .header.header-scrolled .menu-toggle span {
 
 body[data-home-bg='light'] .header.header-scrolled .nav-link.active {
   background-color: var(--white);
-  color: #1a1a1a;
+  color: var(--primary-bg-dark);
 }
 
 body[data-home-bg='dark'] .header.header-scrolled .header-container {
@@ -279,14 +279,14 @@ body[data-home-bg='dark'] .header.header-scrolled .header-container {
 
 body[data-home-bg='dark'] .header.header-scrolled .logo-text,
 body[data-home-bg='dark'] .header.header-scrolled .nav-link {
-  color: #1a1a1a;
+  color: var(--primary-bg-dark);
 }
 
 body[data-home-bg='dark'] .header.header-scrolled .menu-toggle span {
-  background-color: #1a1a1a;
+  background-color: var(--primary-bg-dark);
 }
 
 body[data-home-bg='dark'] .header.header-scrolled .nav-link.active {
-  background-color: #1a1a1a;
+  background-color: var(--primary-bg-dark);
   color: var(--white);
 }

@@ -1,12 +1,15 @@
 :root {
+  --h: 358;
+
   /* Primary Brand Colors */
   --primary-color: #BC1F22;
   --primary-dark: #9a191c;
-  --primary-red-dark: #2e1616;
+  --primary-bg-dark: #2e2e2e;
+  /* --primary-bg-dark: #1A2118; */
+  /* --primary-bg-dark: hsl(var(--h), 21%, 12%); */
 
   /* Secondary Brand Colors */
   --secondary-color: #E4BD49;
-  --secondary-dark: #c9a437;
 
   /* Base Colors */
   --white: #ffffff;
@@ -17,7 +20,7 @@
 
   /* Background Colors */
   --bg-primary: var(--white);
-  --bg-dark: var(--primary-red-dark);
+  --bg-dark: var(--primary-bg-dark);
 
   /* Text Colors */
   --text-primary: var(--headings-black);
