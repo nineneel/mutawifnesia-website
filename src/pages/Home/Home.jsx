@@ -17,6 +17,8 @@ const Home = () => {
   const [textColor, setTextColor] = useState("#1A1A1A");
   const [isDarkBg, setIsDarkBg] = useState(false);
   const toRedBgRef = useRef(null);
+  const contentTextRef = useRef(null);
+  const imageContainerRef = useRef(null);
 
   // Key points for What is Mutawif section
   const keyPoints = [
@@ -172,6 +174,23 @@ const Home = () => {
     };
   }, []);
 
+  // Sync image height with content text height
+  useEffect(() => {
+    const syncHeight = () => {
+      if (contentTextRef.current && imageContainerRef.current) {
+        const contentHeight = contentTextRef.current.offsetHeight;
+        imageContainerRef.current.style.height = `${contentHeight}px`;
+      }
+    };
+
+    syncHeight();
+    window.addEventListener("resize", syncHeight);
+
+    return () => {
+      window.removeEventListener("resize", syncHeight);
+    };
+  }, []);
+
   return (
     <div
       className={`home ${isDarkBg ? "dark-bg" : "light-bg"}`}
@@ -209,41 +228,45 @@ const Home = () => {
         </div>
       </section>
 
+
       {/* ========= WHAT IS MUTAWIF SECTION ========= */}
       <section className="what-is-mutawif-section">
         <div className="content">
-          <div className="content-bottom">
-            <div className="content-left">
+          <div className="content-row">
+            <div className="content-text" ref={contentTextRef}>
               <div className="content-header">
                 <p className="subtitle">Pendamping Spiritual di Tanah Suci</p>
                 <h2 className="title">Apa Itu Mutawif</h2>
               </div>
 
               <p className="description">
-                Mutawif adalah pembimbing ibadah Umrah & Haji yang bertugas
-                memastikan jamaah memahami dan melaksanakan ibadah sesuai
-                tuntunan syariat Islam. Dalam praktiknya, mutawif juga dikenal
-                sebagai pembimbing jamaah atau religious guide yang mendampingi
-                sejak persiapan hingga pelaksanaan ibadah di Tanah Suci.
+                Mutawif adalah <span className="highlight">pembimbing ibadah Umrah & Haji</span> yang memastikan
+                pelaksanaan ibadah sesuai <span className="highlight">syariat Islam</span>. Dikenal juga sebagai <span className="highlight">religious guide</span> yang
+                mendampingi jamaah dari persiapan hingga pelaksanaan di <span className="highlight">Tanah Suci</span>.
               </p>
 
-              <div className="key-points">
-                {keyPoints.map((point, index) => (
-                  <div key={index} className="key-point-item">
-                    <div className="key-point-marker" />
-                    <span className="key-point-text">{point}</span>
-                  </div>
-                ))}
+              <div className="content-keypoints">
+                <h3 className="keypoints-title">Peran Utama Mutawif</h3>
+
+                <div className="key-points">
+                  {keyPoints.map((point, index) => (
+                    <div key={index} className="key-point-item" data-index={index}>
+                      <div className="key-point-marker" />
+                      <span className="key-point-text">{point}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
 
-            <div className="image-container">
+            <div className="image-container" ref={imageContainerRef}>
               <div className="image-border" />
               <div className="image-wrapper">
                 <img
                   src="/images/home/what-is-mutawif/mutawif-guide.png"
-                  alt="Mutawif Guide"
+                  alt="Mutawif membimbing jamaah di Tanah Suci"
                   className="mutawif-image"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -450,31 +473,38 @@ const Home = () => {
 
         <div className="timeline">
           {steps.map((step, index) => (
-            <div key={index} className="timeline-step">
-              <div className="timeline-header">
-                <div className="timeline-line">
-                  <svg
-                    viewBox="0 0 337 18"
-                    xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true"
-                    focusable="false"
-                  >
-                    <circle cx="9" cy="9" r="8" fill="white" />
-                    <line
-                      x1="18"
-                      y1="9"
-                      x2="337"
-                      y2="9"
-                      stroke="white"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                    />
-                  </svg>
-                </div>
+            <div
+              key={index}
+              className={`timeline-item ${index % 2 === 0 ? "left" : "right"}`}
+            >
+              <div className="timeline-content">
                 <p className="step-number">{step.number}</p>
+                <p className="step-title">{step.title}</p>
               </div>
-
-              <p className="step-title">{step.title}</p>
+              <div className="timeline-dot">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 18 18"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <circle cx="9" cy="9" r="8" fill="white" />
+                </svg>
+              </div>
+              <div className="timeline-image">
+                <div className="timeline-image-wrapper">
+                  <img
+                    src={
+                      whyChooseUs[index % whyChooseUs.length]?.image ||
+                      "/images/home/mutawif/mutawif-1.webp"
+                    }
+                    alt={`Step ${step.number}`}
+                    className="step-image"
+                  />
+                </div>
+              </div>
             </div>
           ))}
         </div>

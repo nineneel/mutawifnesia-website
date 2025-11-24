@@ -18,7 +18,7 @@
   align-items: center;
   gap: 20px;
   text-align: center;
-  padding: 60px 60px;
+  padding: 40px 60px;
   background-image: url('/images/cta-background.webp');
   background-size: cover;
   background-position: center;
@@ -57,7 +57,7 @@
 .cta-subtitle {
   font-family: var(--font-secondary);
   font-weight: var(--font-weight-normal);
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-md);
   line-height: var(--line-height-normal);
   color: var(--white);
   margin: 0;
