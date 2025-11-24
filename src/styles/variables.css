@@ -21,6 +21,7 @@
   /* Background Colors */
   --bg-primary: var(--white);
   --bg-dark: var(--primary-bg-dark);
+  
 
   /* Text Colors */
   --text-primary: var(--headings-black);

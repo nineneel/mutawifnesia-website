@@ -1,5 +1,9 @@
 import { useState, useEffect, useRef } from "react";
 import Button from "../../components/common/Button";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
 import "./Home.css";
 import "./css/HeroSection.css";
 import "./css/MutawifGoalSection.css";
@@ -19,6 +23,49 @@ const Home = () => {
   const toRedBgRef = useRef(null);
   const contentTextRef = useRef(null);
   const imageContainerRef = useRef(null);
+
+  // Hero slider content
+  const heroSlides = [
+    {
+      image: "/images/hero-bg.jpg",
+      eyebrow: "Professional Certification for Future Mutawif Indonesia",
+      title: (
+        <>
+          Sertifikasi Mutawif Profesional
+        </>
+      ),
+      subtitle:
+        "Bergabunglah dengan program sertifikasi mutawif profesional dan wujudkan impian membimbing jamaah Umrah & Haji",
+      buttonText: "Gabung Sekarang",
+      buttonLink: "/join",
+    },
+    {
+      image: "/images/home/mutawif/mutawif-2.webp",
+      eyebrow: "Certified & Experienced Mutawif Guides",
+      title: (
+        <>
+          Mutawif Bersertifikat Berstandar Nasional
+        </>
+      ),
+      subtitle:
+        "Dapatkan sertifikasi resmi dari LSP AHLAN yang diakui BNSP dan Kementerian Haji & Umrah RI",
+      buttonText: "Pelajari Lebih Lanjut",
+      buttonLink: "/join",
+    },
+    {
+      image: "/images/home/mutawif/mutawif-4.webp",
+      eyebrow: "Join The Professional Mutawif Community",
+      title: (
+        <>
+          Bergabung dengan Komunitas Mutawif
+        </>
+      ),
+      subtitle:
+        "Jalin networking dengan mutawif profesional di seluruh Indonesia dan tingkatkan karir di industri Umrah & Haji",
+      buttonText: "Daftar Sekarang",
+      buttonLink: "/join",
+    },
+  ];
 
   // Key points for What is Mutawif section
   const keyPoints = [
@@ -202,32 +249,44 @@ const Home = () => {
     >
       {/* ========= HERO SECTION ========= */}
       <section className="hero-section">
-        <div className="hero-background">
-          <img
-            src="/images/hero-bg.jpg"
-            alt="Masjidil Haram"
-            className="hero-bg-image"
-          />
-          <div className="hero-overlay"></div>
-        </div>
+        <Swiper
+          modules={[Pagination, Autoplay]}
+          pagination={{
+            clickable: true,
+            el: ".hero-pagination",
+          }}
+          autoplay={{
+            delay: 5000,
+            disableOnInteraction: false,
+          }}
+          loop={true}
+          speed={1000}
+          className="hero-swiper"
+        >
+          {heroSlides.map((slide, index) => (
+            <SwiperSlide key={index}>
+              <div className="hero-background">
+                <img
+                  src={slide.image}
+                  alt={`Hero slide ${index + 1}`}
+                  className="hero-bg-image"
+                />
+                <div className="hero-overlay"></div>
+              </div>
 
-        <div className="hero-content">
-          <div className="hero-text">
-            <h1 className="hero-title">
-              Professional Certification for Future Mutawif Indonesia
-            </h1>
-            <p className="hero-subtitle">
-              Bergabunglah dengan program sertifikasi mutawif profesional dan
-              wujudkan impian membimbing jamaah Umrah & Haji
-            </p>
-          </div>
-
-          <Button to="/join" variant="primary" size="large">
-            Gabung Sekarang
-          </Button>
-        </div>
+              <div className="hero-content">
+                {/* <p className="hero-eyebrow">{slide.eyebrow}</p> */}
+                <h1 className="hero-title">{slide.title}</h1>
+                <p className="hero-subtitle">{slide.subtitle}</p>
+                <Button to={slide.buttonLink} variant="primary" size="large">
+                  {slide.buttonText}
+                </Button>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+        <div className="hero-pagination"></div>
       </section>
-
 
       {/* ========= WHAT IS MUTAWIF SECTION ========= */}
       <section className="what-is-mutawif-section">
@@ -240,9 +299,15 @@ const Home = () => {
               </div>
 
               <p className="description">
-                Mutawif adalah <span className="highlight">pembimbing ibadah Umrah & Haji</span> yang memastikan
-                pelaksanaan ibadah sesuai <span className="highlight">syariat Islam</span>. Dikenal juga sebagai <span className="highlight">religious guide</span> yang
-                mendampingi jamaah dari persiapan hingga pelaksanaan di <span className="highlight">Tanah Suci</span>.
+                Mutawif adalah{" "}
+                <span className="highlight">
+                  pembimbing ibadah Umrah & Haji
+                </span>{" "}
+                yang memastikan pelaksanaan ibadah sesuai{" "}
+                <span className="highlight">syariat Islam</span>. Dikenal juga
+                sebagai <span className="highlight">religious guide</span> yang
+                mendampingi jamaah dari persiapan hingga pelaksanaan di{" "}
+                <span className="highlight">Tanah Suci</span>.
               </p>
 
               <div className="content-keypoints">
@@ -250,7 +315,11 @@ const Home = () => {
 
                 <div className="key-points">
                   {keyPoints.map((point, index) => (
-                    <div key={index} className="key-point-item" data-index={index}>
+                    <div
+                      key={index}
+                      className="key-point-item"
+                      data-index={index}
+                    >
                       <div className="key-point-marker" />
                       <span className="key-point-text">{point}</span>
                     </div>
