@@ -1,5 +1,5 @@
 .mutawif-goal-section {
-  padding: 70px 110px;
+  padding: 50px 110px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -46,7 +46,6 @@
   text-align: left;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
   border: none;
-  border-left: 3px solid transparent;
   position: relative;
   overflow: hidden;
   min-height: 180px;
@@ -55,10 +54,7 @@
 
 .goal-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   background: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
@@ -144,7 +140,6 @@
 
   .mutawif-goal-grid {
     grid-template-columns: 1fr;
-    gap: 14px;
   }
 
   .goal-card {

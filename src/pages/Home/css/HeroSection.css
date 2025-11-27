@@ -56,9 +56,10 @@
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.4) 0%,
-    rgba(0, 0, 0, 0.6) 100%
+    0deg,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.7) 18%,
+    rgba(0, 0, 0, 0) 40%
   );
 }
 
@@ -134,12 +135,13 @@
 
 .hero-title {
   font-family: var(--font-primary);
-  font-weight: 700;
+  font-weight: 800;
   font-size: clamp(38px, 6vw, 52px);
   line-height: 1.1;
   letter-spacing: -0.02em;
   margin: 0 0 24px;
   color: #ffffff;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.6), 0 1px 4px rgba(0, 0, 0, 0.4);
 }
 
 .hero-subtitle {
@@ -149,6 +151,7 @@
   color: rgba(255, 255, 255, 0.95);
   max-width: 700px;
   margin: 0 auto 32px;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.5), 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 /* Pagination Styles */
@@ -226,7 +229,7 @@
   }
 
   .hero-pagination {
-    bottom: 120px;
+    bottom: 180px;
     gap: 10px;
   }
 
@@ -287,7 +290,7 @@
   }
 
   .hero-pagination {
-    bottom: 100px;
+    bottom: 160px;
     gap: 8px;
   }
 

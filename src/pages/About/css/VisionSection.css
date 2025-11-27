@@ -41,7 +41,7 @@
 
 .vision-card {
   position: relative;
-  background-image: url('/images/home/mutawif/mutawif-1.webp');
+  background-image: var(--mutawif-1);
   background-size: cover;
   background-position: center;
   padding: 48px 40px;
@@ -65,12 +65,12 @@
 
 .vision-card:nth-child(1) {
   animation-delay: 0.1s;
-  background-image: url('/images/home/mutawif/mutawif-1.webp');
+  background-image: var(--mutawif-1);
 }
 
 .vision-card:nth-child(2) {
   animation-delay: 0.2s;
-  background-image: url('/images/home/mutawif/mutawif-2.webp');
+  background-image: var(--mutawif-2);
 }
 
 .vision-card:hover::before {

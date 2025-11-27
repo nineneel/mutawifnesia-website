@@ -1,3 +1,5 @@
+@import './styles/imageVariables.css';
+
 .app {
   min-height: 100vh;
   display: flex;

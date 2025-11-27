@@ -1,0 +1,12 @@
+/* Centralized CSS Variables for Images */
+:root {
+  /* Mutawif Images */
+  --mutawif-1: url('/images/home/mutawif/mutawif-1.webp');
+  --mutawif-2: url('/images/home/mutawif/mutawif-2.webp');
+
+  /* Section Images */
+  --cta-background: url('/images/cta-background.webp');
+  --cta-background-2: url('/images/cta-background-2.webp');
+  --lembaga-image: url('/images/sections/lembaga-image.jpg');
+  --proses-accent: url('/images/sections/proses-accent.png');
+}

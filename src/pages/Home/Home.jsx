@@ -1,15 +1,16 @@
 import { useState, useEffect, useRef } from "react";
 import { useTranslation, Trans } from "react-i18next";
 import Button from "../../components/common/Button";
+import CTA from "../../components/common/CTA";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay, EffectFade } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
+import { IMAGES } from "../../constants/imageConstants";
 import "./Home.css";
 import "./css/HeroSection.css";
 import "./css/MutawifGoalSection.css";
-import "./css/CTASection.css";
 import "./css/WhyMutawifnesiaSection.css";
 import "./css/WhatIsMutawifSection.css";
 import "./css/LembagaSection.css";
@@ -17,6 +18,7 @@ import "./css/RequirementsSection.css";
 import "./css/ProcessSection.css";
 import "./css/DiscoverSection.css";
 import "./css/JoinCtaSection.css";
+import "./css/ImpactSection.css";
 
 const Home = () => {
   const { t } = useTranslation();
@@ -31,17 +33,17 @@ const Home = () => {
   const heroSlidesData = t('home.hero.slides', { returnObjects: true });
   const heroSlides = [
     {
-      image: "/images/hero-bg.jpg",
+      image: IMAGES.HERO[1],
       ...heroSlidesData[0],
       buttonLink: "/join",
     },
     {
-      image: "/images/home/mutawif/mutawif-2.webp",
+      image: IMAGES.HERO[3],
       ...heroSlidesData[1],
       buttonLink: "/join",
     },
     {
-      image: "/images/home/mutawif/mutawif-4.webp",
+      image: IMAGES.HERO[2],
       ...heroSlidesData[2],
       buttonLink: "/join",
     },
@@ -54,23 +56,23 @@ const Home = () => {
   const certificationGoalsData = t('home.mutawifGoal.goals', { returnObjects: true });
   const certificationGoals = [
     {
-      icon: "/images/home/mutawif/mutawif-1.webp",
+      icon: IMAGES.GOALS[1],
       ...certificationGoalsData[0],
     },
     {
-      icon: "/images/home/mutawif/mutawif-2.webp",
+      icon: IMAGES.GOALS[2],
       ...certificationGoalsData[1],
     },
     {
-      icon: "/images/home/mutawif/mutawif-3.webp",
+      icon: IMAGES.GOALS[3],
       ...certificationGoalsData[2],
     },
     {
-      icon: "/images/home/mutawif/mutawif-4.webp",
+      icon: IMAGES.GOALS[4],
       ...certificationGoalsData[3],
     },
     {
-      icon: "/images/home/mutawif/mutawif-1.webp",
+      icon: IMAGES.GOALS[5],
       ...certificationGoalsData[4],
     },
   ];
@@ -81,22 +83,47 @@ const Home = () => {
     {
       number: "01",
       ...whyChooseUsData[0],
-      image: "/images/home/mutawif/mutawif-1.webp",
+      image: IMAGES.WHY[1],
     },
     {
       number: "02",
       ...whyChooseUsData[1],
-      image: "/images/home/mutawif/mutawif-2.webp",
+      image: IMAGES.WHY[2],
     },
     {
       number: "03",
       ...whyChooseUsData[2],
-      image: "/images/home/mutawif/mutawif-3.webp",
+      image: IMAGES.WHY[3],
     },
     {
       number: "04",
       ...whyChooseUsData[3],
-      image: "/images/home/mutawif/mutawif-4.webp",
+      image: IMAGES.WHY[4],
+    },
+  ];
+
+  // Impact and Benefits data
+  const impactBenefitsData = t('home.impact.benefits', { returnObjects: true });
+  const impactBenefits = [
+    {
+      number: "01",
+      ...impactBenefitsData[0],
+      image: IMAGES.IMPACT[1],
+    },
+    {
+      number: "02",
+      ...impactBenefitsData[1],
+      image: IMAGES.IMPACT[2],
+    },
+    {
+      number: "03",
+      ...impactBenefitsData[2],
+      image: IMAGES.IMPACT[3],
+    },
+    {
+      number: "04",
+      ...impactBenefitsData[3],
+      image: IMAGES.IMPACT[4],
     },
   ];
 
@@ -109,22 +136,27 @@ const Home = () => {
     {
       number: "01",
       title: stepsData[0],
+      image: IMAGES.CERTIFICATION_PROCESS[1],
     },
     {
       number: "02",
       title: stepsData[1],
+      image: IMAGES.CERTIFICATION_PROCESS[2],
     },
     {
       number: "03",
       title: stepsData[2],
+      image: IMAGES.CERTIFICATION_PROCESS[3],
     },
     {
       number: "04",
       title: stepsData[3],
+      image: IMAGES.CERTIFICATION_PROCESS[4],
     },
     {
       number: "05",
       title: stepsData[4],
+      image: IMAGES.CERTIFICATION_PROCESS[5],
     },
   ];
 
@@ -316,7 +348,7 @@ const Home = () => {
               <div className="image-border" />
               <div className="image-wrapper">
                 <img
-                  src="/images/home/what-is-mutawif/mutawif-guide.png"
+                  src={IMAGES.SECTIONS.MUTAWIF_GUIDE}
                   alt="Mutawif membimbing jamaah di Tanah Suci"
                   className="mutawif-image"
                   loading="lazy"
@@ -352,62 +384,12 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ========= CTA SECTION ========= */}
-      <section className="cta-section">
-        <div className="cta-container">
-          <h2 className="cta-title">
-            {t('home.cta.title')}
-          </h2>
-          <p className="cta-subtitle">
-            {t('home.cta.subtitle')}
-          </p>
-          <Button variant="primary" size="large">
-            {t('home.cta.button')}
-          </Button>
-        </div>
-      </section>
-
-      {/* ========= WHY MUTAWIFNESIA SECTION ========= */}
-      <section ref={toRedBgRef} className="why-mutawifnesia-section">
-        <div className="why-mutawifnesia-content">
-          <div className="why-mutawifnesia-header-container">
-            <div className="why-mutawifnesia-header">
-              <h2 className="why-mutawifnesia-title">{t('home.whyMutawifnesia.title')}</h2>
-              <p className="why-mutawifnesia-subtitle">
-                {t('home.whyMutawifnesia.subtitle')}
-              </p>
-            </div>
-          </div>
-
-          <div className="why-mutawifnesia-list">
-            {whyChooseUs.map((item, index) => (
-              <div key={index} className="why-mutawifnesia-card">
-                <div className="why-mutawifnesia-card-image-wrapper">
-                  <div
-                    className="why-mutawifnesia-card-image"
-                    style={{ backgroundImage: `url(${item.image})` }}
-                  />
-                  <div className="why-mutawifnesia-card-overlay" />
-                  <p className="why-mutawifnesia-number">{item.number}</p>
-                </div>
-                <div className="why-mutawifnesia-card-content">
-                  <h3 className="why-mutawifnesia-card-title">{item.title}</h3>
-                  <p className="why-mutawifnesia-description">
-                    {item.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ========= LEMBAGA SECTION ========= */}
       <section className="lembaga-section">
         <div className="lembaga-inner">
           <figure className="lembaga-visual">
             <img
-              src="/images/sections/lembaga-image.jpg"
+              src={IMAGES.SECTIONS.LEMBAGA_IMAGE}
               alt="Mutawif memberikan bimbingan ibadah kepada jamaah"
               className="lembaga-visual-image"
               loading="lazy"
@@ -448,8 +430,11 @@ const Home = () => {
         </div>
       </section>
 
+      {/* ========= CTA SECTION ========= */}
+      <CTA translationKey="home.cta" />
+
       {/* ========= REQUIREMENTS SECTION ========= */}
-      <section className="requirements-section">
+      <section  ref={toRedBgRef}  className="requirements-section">
         <div className="requirements-inner">
           <div className="requirements-copy">
             <div className="requirements-header">
@@ -496,7 +481,7 @@ const Home = () => {
 
           <figure className="requirements-visual">
             <img
-              src="/images/sections/syarat-image.jpg"
+              src={IMAGES.SECTIONS.SYARAT_IMAGE}
               alt="Calon mutawif mengikuti pembekalan di Masjid Nabawi"
               className="requirements-visual-image"
               loading="lazy"
@@ -540,8 +525,8 @@ const Home = () => {
                 <div className="timeline-image-wrapper">
                   <img
                     src={
-                      whyChooseUs[index % whyChooseUs.length]?.image ||
-                      "/images/home/mutawif/mutawif-1.webp"
+                      step.image ||
+                      IMAGES.MUTAWIF[1]
                     }
                     alt={`Step ${step.number}`}
                     className="step-image"
@@ -550,6 +535,76 @@ const Home = () => {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* ========= WHY MUTAWIFNESIA SECTION ========= */}
+      <section className="why-mutawifnesia-section">
+        <div className="why-mutawifnesia-content">
+          <div className="why-mutawifnesia-header-container">
+            <div className="why-mutawifnesia-header">
+              <h2 className="why-mutawifnesia-title">{t('home.whyMutawifnesia.title')}</h2>
+              <p className="why-mutawifnesia-subtitle">
+                {t('home.whyMutawifnesia.subtitle')}
+              </p>
+            </div>
+          </div>
+
+          <div className="why-mutawifnesia-list">
+            {whyChooseUs.map((item, index) => (
+              <div key={index} className="why-mutawifnesia-card">
+                <div className="why-mutawifnesia-card-image-wrapper">
+                  <div
+                    className="why-mutawifnesia-card-image"
+                    style={{ backgroundImage: `url(${item.image})` }}
+                  />
+                  <div className="why-mutawifnesia-card-overlay" />
+                  <p className="why-mutawifnesia-number">{item.number}</p>
+                </div>
+                <div className="why-mutawifnesia-card-content">
+                  <h3 className="why-mutawifnesia-card-title">{item.title}</h3>
+                  <p className="why-mutawifnesia-description">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========= IMPACT & BENEFITS SECTION ========= */}
+      <section className="impact-section">
+        <div className="impact-content">
+          <div className="impact-header-container">
+            <div className="impact-header">
+              <h2 className="impact-title">{t('home.impact.title')}</h2>
+              <p className="impact-subtitle">
+                {t('home.impact.subtitle')}
+              </p>
+            </div>
+          </div>
+
+          <div className="impact-list">
+            {impactBenefits.map((item, index) => (
+              <div key={index} className="impact-card">
+                <div className="impact-card-image-wrapper">
+                  <div
+                    className="impact-card-image"
+                    style={{ backgroundImage: `url(${item.image})` }}
+                  />
+                  <div className="impact-card-overlay" />
+                  <p className="impact-number">{item.number}</p>
+                </div>
+                <div className="impact-card-content">
+                  <h3 className="impact-card-title">{item.title}</h3>
+                  <p className="impact-description">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -565,7 +620,7 @@ const Home = () => {
         <div className="discover-card">
           <div className="card-image">
             <img
-              src="/images/sections/discover-package.webp"
+              src={IMAGES.SECTIONS.DISCOVER_PACKAGE}
               alt="Program Sertifikasi Mutawifnesia"
               className="package-image"
             />
@@ -706,28 +761,18 @@ const Home = () => {
                 </p>
               </div>
 
-              <Button variant="primary" size="medium">
-                {t('home.discover.button')}
-              </Button>
+              <div className="package-button">
+                <Button variant="primary" size="medium">
+                  {t('home.discover.button')}
+                </Button>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* ========= CTA SECTION (BOTTOM) ========= */}
-      <section className="cta-section cta-bottom">
-        <div className="cta-container">
-          <h2 className="cta-title">
-            {t('home.cta.title')}
-          </h2>
-          <p className="cta-subtitle">
-            {t('home.cta.subtitle')}
-          </p>
-          <Button variant="primary" size="large">
-            {t('home.cta.button')}
-          </Button>
-        </div>
-      </section>
+      <CTA translationKey="home.cta" variant="bottom" />
     </div>
   );
 };

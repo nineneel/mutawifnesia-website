@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { IMAGES } from '../../../constants/imageConstants';
 import './Footer.css';
 
 const Footer = () => {
@@ -10,7 +11,7 @@ const Footer = () => {
         <div className="footer-grid">
           <div className="footer-section footer-brand">
             <div className="footer-logo">
-              <img src="/logo.png" alt="Mutawifnesia Logo" className="footer-logo-img" />
+              <img src={IMAGES.LOGO} alt="Mutawifnesia Logo" className="footer-logo-img" />
               <h3>Mutawifnesia</h3>
             </div>
             <p>Sertifikasi profesional untuk Mutawif Indonesia masa depan</p>

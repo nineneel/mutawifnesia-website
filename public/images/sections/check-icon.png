@@ -1,6 +1,0 @@
-<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="Check Circle Icon">
-<path id="Vector" d="M9 18C13.9707 18 18 13.9707 18 9C18 4.0293 13.9707 0 9 0C4.0293 0 0 4.0293 0 9C0 13.9707 4.0293 18 9 18Z" fill="var(--fill-0, #E4BD49)"/>
-<path id="Check" d="M4.92707 9.58192L7.25448 11.9093L13.073 6.0908" stroke="var(--stroke-0, white)" stroke-width="1.64304" stroke-linecap="round" stroke-linejoin="round"/>
-</g>
-</svg>

@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import { useTranslation, Trans } from "react-i18next";
-import Button from "../../components/common/Button";
+import CTA from "../../components/common/CTA";
+import { IMAGES } from "../../constants/imageConstants";
 import "./About.css";
 import "./css/ProfileSection.css";
 import "./css/VisionSection.css";
@@ -28,22 +29,22 @@ const About = () => {
     {
       position: t('about.organization.roles.chairman'),
       name: "Dr. Ahmad Hidayat, M.Si",
-      image: "/images/home/mutawif/mutawif-1.webp",
+      image: IMAGES.MUTAWIF[1],
     },
     {
       position: t('about.organization.roles.secretary'),
       name: "Dra. Siti Nurhaliza",
-      image: "/images/home/mutawif/mutawif-2.webp",
+      image: IMAGES.MUTAWIF[2],
     },
     {
       position: t('about.organization.roles.treasurer'),
       name: "M. Rizki Pratama, S.E",
-      image: "/images/home/mutawif/mutawif-3.webp",
+      image: IMAGES.MUTAWIF[3],
     },
     {
       position: t('about.organization.roles.coordinator'),
       name: "Prof. Dr. Abdullah Malik",
-      image: "/images/home/mutawif/mutawif-4.webp",
+      image: IMAGES.MUTAWIF[4],
     },
   ];
 
@@ -70,7 +71,7 @@ const About = () => {
       <section className="about-hero-section">
         <div className="about-hero-background">
           <img
-            src="/images/home/mutawif/mutawif-2.webp"
+            src={IMAGES.MUTAWIF[2]}
             alt="Masjidil Haram"
             className="about-hero-bg-image"
           />
@@ -115,7 +116,7 @@ const About = () => {
               <div className="profile-image-border" />
               <div className="profile-image-wrapper">
                 <img
-                  src="/images/home/what-is-mutawif/mutawif-guide.png"
+                  src={IMAGES.MUTAWIF.GUIDE}
                   alt="LSP AHLAN Building"
                   className="profile-image"
                   loading="lazy"
@@ -189,19 +190,7 @@ const About = () => {
       </section>
 
       {/* ========= CTA SECTION ========= */}
-      <section className="about-cta-section">
-        <div className="about-cta-container">
-          <h2 className="about-cta-title">
-            {t('about.cta.title')}
-          </h2>
-          <p className="about-cta-subtitle">
-            {t('about.cta.subtitle')}
-          </p>
-          <Button to="/join" variant="primary" size="large">
-            {t('about.cta.button')}
-          </Button>
-        </div>
-      </section>
+      <CTA translationKey="about.cta" buttonTo="/join" />
     </div>
   );
 };

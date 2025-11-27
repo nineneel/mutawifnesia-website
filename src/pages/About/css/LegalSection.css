@@ -50,7 +50,7 @@
 
 .legal-card {
   position: relative;
-  background-image: url('/images/sections/lembaga-image.jpg');
+  background-image: var(--lembaga-image);
   background-size: cover;
   background-position: center;
   padding: 40px 32px;

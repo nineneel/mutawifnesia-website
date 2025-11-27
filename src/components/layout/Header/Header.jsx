@@ -2,6 +2,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import Button from '../../common/Button';
 import LanguageSwitcher from '../../common/LanguageSwitcher';
+import { IMAGES } from '../../../constants/imageConstants';
 import './Header.css';
 
 const Header = () => {
@@ -56,7 +57,7 @@ const Header = () => {
       <div className="header-container">
         {/* Section 1 */}
         <Link to="/" className="logo">
-          <img src="/logo.png" alt="Mutawifnesia Logo" className="logo-image" />
+          <img src={IMAGES.LOGO} alt="Mutawifnesia Logo" className="logo-image" />
           <h1 className="logo-text">Mutawifnesia</h1>
         </Link>
         <button

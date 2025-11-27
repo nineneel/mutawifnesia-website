@@ -1,5 +1,5 @@
 .lembaga-section {
-  padding: clamp(64px, 8vw, 140px) clamp(24px, 7vw, 100px);
+  padding: 50px 120px;
 }
 
 .lembaga-inner {
@@ -14,20 +14,21 @@
 .lembaga-visual {
   position: relative;
   margin: 0;
-  min-height: 460px;
   border: 2px solid var(--secondary-color);
-  padding: clamp(12px, 1.6vw, 12px);
-  background: rgba(0, 0, 0, 0.25);
+  padding: 12px;
   display: flex;
-  align-items: stretch;
+  align-items: center;
   justify-content: center;
   overflow: hidden;
+  aspect-ratio: 4 / 5;
+  max-height: 540px;
 }
 
 .lembaga-visual-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   display: block;
 }
 
@@ -113,7 +114,12 @@
     grid-template-columns: 1fr;
   }
 
+  .lembaga-copy {
+    order: 1;
+  }
+
   .lembaga-visual {
+    order: 2;
     max-width: 540px;
     margin: 0 auto;
     min-height: 420px;

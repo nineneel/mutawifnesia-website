@@ -4,20 +4,20 @@
       "slides": [
         {
           "eyebrow": "Professional Certification for Future Mutawif Indonesia",
-          "title": "Professional Mutawif Certification",
-          "subtitle": "Join the professional mutawif certification program and realize your dream of guiding Umrah & Hajj pilgrims",
+          "title": "Become a Certified Professional Mutawif",
+          "subtitle": "Fulfill your noble calling to guide pilgrims to the Holy Land - build a meaningful career with official certification and promising income",
           "buttonText": "Join Now"
         },
         {
           "eyebrow": "Certified & Experienced Mutawif Guides",
-          "title": "National Standard Certificate",
-          "subtitle": "Get official certification from LSP AHLAN recognized by BNSP and the Ministry of Hajj & Umrah RI",
+          "title": "Expert Mutawif from the Best Training",
+          "subtitle": "Learn from experienced mentors, field practice in the Holy Land, earn official certification - everything you need to become a professional mutawif",
           "buttonText": "Learn More"
         },
         {
           "eyebrow": "Join The Professional Mutawif Community",
-          "title": "Join the Mutawif Community",
-          "subtitle": "Build networking with professional mutawif throughout Indonesia and advance your career in the Umrah & Hajj industry",
+          "title": "Professional Community & Wide Career Opportunities",
+          "subtitle": "Connect with certified mutawif community across Indonesia, access exclusive job openings at leading travel agencies, and develop your career in the Umrah & Hajj industry",
           "buttonText": "Register Now"
         }
       ]
@@ -86,6 +86,28 @@
         }
       ]
     },
+    "impact": {
+      "title": "Positive Impact & Benefits",
+      "subtitle": "Real benefits you'll gain after completing this program",
+      "benefits": [
+        {
+          "title": "Professional Career",
+          "description": "Open up opportunities to work at leading Umrah & Hajj travel agencies with competitive salaries."
+        },
+        {
+          "title": "Official Recognition",
+          "description": "Get official certification recognized by BNSP and the Ministry of Religious Affairs RI."
+        },
+        {
+          "title": "Quality Network",
+          "description": "Join a professional mutawif community throughout Indonesia and access exclusive opportunities."
+        },
+        {
+          "title": "Spiritual Experience",
+          "description": "Have the opportunity to visit the Holy Land regularly while earning income and rewards."
+        }
+      ]
+    },
     "lembaga": {
       "heading": ["Certification", "Organizing", "Institution"],
       "description": "Mutawif Certification is conducted by LSP AHLAN, a professional certification institution licensed by the National Professional Certification Board (BNSP) and has a certification scheme validated by the Ministry of Hajj & Umrah RI.",
@@ -110,11 +132,11 @@
       "title": "Certification Process",
       "description": "Follow the certification flow from registration and document verification, self-assessment, competency test, result determination to certificate issuance.",
       "steps": [
-        "Registration and Document Verification.",
-        "Self Assessment.",
-        "Competency Test: practice/simulation observation of guidance, interview, and knowledge test.",
-        "Result determination: Competent / Not Yet Competent.",
-        "Issuance of Competency Certificate."
+        "Participant registration and verification process of required document completeness.",
+        "Implementation of Self Assessment to measure participant readiness.",
+        "Implementation of Competency Test which includes practice observation or guidance simulation, in-depth interview sessions, and knowledge test related to the mutawif profession.",
+        "Determination and announcement of Competency Test results with Competent or Not Yet Competent status.",
+        "Issuance and delivery of Competency Certificate for participants declared competent."
       ]
     },
     "discover": {

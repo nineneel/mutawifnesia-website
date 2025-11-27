@@ -4,20 +4,20 @@
       "slides": [
         {
           "eyebrow": "Professional Certification for Future Mutawif Indonesia",
-          "title": "Sertifikasi Mutawif Profesional",
-          "subtitle": "Bergabunglah dengan program sertifikasi mutawif profesional dan wujudkan impian membimbing jamaah Umrah & Haji",
+          "title": "Menjadi Mutawif Profesional Bersertifikat",
+          "subtitle": "Wujudkan panggilan mulia membimbing jamaah ke Tanah Suci - raih karir bermakna dengan sertifikasi resmi dan penghasilan yang menjanjikan",
           "buttonText": "Gabung Sekarang"
         },
         {
           "eyebrow": "Certified & Experienced Mutawif Guides",
-          "title": "Sertifikat Berstandar Nasional",
-          "subtitle": "Dapatkan sertifikasi resmi dari LSP AHLAN yang diakui BNSP dan Kementerian Haji & Umrah RI",
+          "title": "Mutawif Handal dari Pelatihan Terbaik",
+          "subtitle": "Belajar dari mentor berpengalaman, praktik lapangan di Tanah Suci, raih sertifikasi resmi - semua yang dibutuhkan untuk jadi mutawif profesional",
           "buttonText": "Pelajari Lebih Lanjut"
         },
         {
           "eyebrow": "Join The Professional Mutawif Community",
-          "title": "Bergabung dengan Komunitas Mutawif",
-          "subtitle": "Jalin networking dengan mutawif profesional di seluruh Indonesia dan tingkatkan karir di industri Umrah & Haji",
+          "title": "Komunitas Profesional & Peluang Karir Terbuka Lebar",
+          "subtitle": "Terhubung dengan komunitas mutawif bersertifikat se-Indonesia, akses lowongan eksklusif di biro travel terkemuka, dan kembangkan karir di industri Umrah & Haji",
           "buttonText": "Daftar Sekarang"
         }
       ]
@@ -86,6 +86,28 @@
         }
       ]
     },
+    "impact": {
+      "title": "Dapatkan Dampak & Manfaatnya",
+      "subtitle": "Manfaat nyata yang akan Anda dapatkan setelah mengikuti program ini",
+      "benefits": [
+        {
+          "title": "Karir Profesional",
+          "description": "Membuka peluang bekerja di biro travel Umrah & Haji terkemuka dengan gaji yang kompetitif."
+        },
+        {
+          "title": "Pengakuan Resmi",
+          "description": "Mendapatkan sertifikasi resmi yang diakui oleh BNSP dan Kementerian Agama RI."
+        },
+        {
+          "title": "Jaringan Berkualitas",
+          "description": "Bergabung dengan komunitas mutawif profesional di seluruh Indonesia dan akses peluang eksklusif."
+        },
+        {
+          "title": "Pengalaman Spiritual",
+          "description": "Berkesempatan mengunjungi Tanah Suci secara rutin sambil meraih penghasilan dan pahala."
+        }
+      ]
+    },
     "lembaga": {
       "heading": ["Lembaga", "Penyelenggara", "Sertifikasi"],
       "description": "Sertifikasi Mutawif dilaksanakan oleh LSP AHLAN, lembaga sertifikasi profesi yang telah mendapat lisensi dari Badan Nasional Sertifikasi Profesi (BNSP) dan memiliki skema sertifikasi yang disahkan oleh Kementerian Haji & Umrah RI.",
@@ -110,11 +132,11 @@
       "title": "Proses Sertifikasi",
       "description": "Ikuti alur sertifikasi dari pendaftaran dan verifikasi berkas, asesmen mandiri, uji kompetensi, penetapan hasil hingga penerbitan sertifikat.",
       "steps": [
-        "Pendaftaran dan Verifikasi Dokumen.",
-        "Asesmen Mandiri (Self Assessment).",
-        "Uji Kompetensi: observasi praktik/simulasi bimbingan, wawancara, dan tes pengetahuan.",
-        "Penetapan hasil: Kompeten / Belum Kompeten.",
-        "Penerbitan Sertifikat Kompetensi."
+        "Pendaftaran peserta dan proses verifikasi kelengkapan dokumen persyaratan.",
+        "Pelaksanaan Asesmen Mandiri (Self Assessment) untuk mengukur kesiapan peserta.",
+        "Pelaksanaan Uji Kompetensi yang meliputi observasi praktik atau simulasi bimbingan, sesi wawancara mendalam, serta tes pengetahuan terkait profesi mutawif.",
+        "Penetapan dan pengumuman hasil Uji Kompetensi dengan status Kompeten atau Belum Kompeten.",
+        "Penerbitan dan penyerahan Sertifikat Kompetensi bagi peserta yang dinyatakan kompeten."
       ]
     },
     "discover": {
