@@ -203,5 +203,11 @@
       "subtitle": "Mari bersama-sama meningkatkan kualitas pelayanan jamaah Umrah & Haji Indonesia",
       "button": "Daftar Sekarang"
     }
+  },
+  "comingSoon": {
+    "title": "Segera Hadir",
+    "subtitle": "Halaman Dalam Pengembangan",
+    "description": "Halaman ini sedang dalam pengembangan. Kami akan segera meluncurkan konten yang menarik untuk Anda.",
+    "button": "Kembali ke Beranda"
   }
 }

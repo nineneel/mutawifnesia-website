@@ -203,5 +203,11 @@
       "subtitle": "Let's work together to improve the quality of Umrah & Hajj pilgrim services in Indonesia",
       "button": "Register Now"
     }
+  },
+  "comingSoon": {
+    "title": "Coming Soon",
+    "subtitle": "Page Under Development",
+    "description": "This page is under development. We will launch exciting content for you soon.",
+    "button": "Back to Home"
   }
 }

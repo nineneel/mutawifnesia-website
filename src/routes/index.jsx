@@ -3,7 +3,7 @@ import App from '../App';
 import Home from '../pages/Home';
 import About from '../pages/About';
 import Contact from '../pages/Contact';
-import Obligation from '../pages/Obligation';
+import ComingSoon from '../pages/ComingSoon';
 import NotFound from '../pages/NotFound';
 
 export const router = createBrowserRouter([
@@ -21,7 +21,7 @@ export const router = createBrowserRouter([
       },
       {
         path: 'obligation',
-        element: <Obligation />
+        element: <ComingSoon />
       },
       {
         path: 'join',

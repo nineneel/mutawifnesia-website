@@ -83,7 +83,7 @@ const Header = () => {
             <Link to="/about" className={`nav-link ${isActive('/about') ? 'active' : ''}`} onClick={handleNavLinkClick}>
               About
             </Link>
-            <Link to="/obligation" className={`nav-link ${isActive('/obligasi') ? 'active' : ''}`} onClick={handleNavLinkClick}>
+            <Link to="/obligation" className={`nav-link ${isActive('/obligation') ? 'active' : ''}`} onClick={handleNavLinkClick}>
               Obligasi
             </Link>
             <LanguageSwitcher />
