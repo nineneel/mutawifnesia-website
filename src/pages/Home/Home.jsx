@@ -8,6 +8,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 import { IMAGES } from "../../constants/imageConstants";
+import { getWhatsAppUrl } from "../../constants/contactConstants";
 import "./Home.css";
 import "./css/HeroSection.css";
 import "./css/MutawifGoalSection.css";
@@ -35,17 +36,17 @@ const Home = () => {
     {
       image: IMAGES.HERO[1],
       ...heroSlidesData[0],
-      buttonLink: "/join",
+      buttonLink: "#program-mutawifnesia",
     },
     {
       image: IMAGES.HERO[3],
       ...heroSlidesData[1],
-      buttonLink: "/join",
+      buttonLink: "#program-mutawifnesia",
     },
     {
       image: IMAGES.HERO[2],
       ...heroSlidesData[2],
-      buttonLink: "/join",
+      buttonLink: "#program-mutawifnesia",
     },
   ];
 
@@ -431,7 +432,7 @@ const Home = () => {
       </section>
 
       {/* ========= CTA SECTION ========= */}
-      <CTA translationKey="home.cta" />
+      <CTA translationKey="home.cta" buttonTo="#program-mutawifnesia" />
 
       {/* ========= REQUIREMENTS SECTION ========= */}
       <section  ref={toRedBgRef}  className="requirements-section">
@@ -609,7 +610,7 @@ const Home = () => {
       </section>
 
       {/* ========= DISCOVER SECTION ========= */}
-      <section className="discover-section">
+      <section id="program-mutawifnesia" className="discover-section">
         <div className="discover-header">
           <h2 className="discover-title">{t('home.discover.title')}</h2>
           <p className="discover-description">
@@ -762,7 +763,13 @@ const Home = () => {
               </div>
 
               <div className="package-button">
-                <Button variant="primary" size="medium">
+                <Button
+                  href={getWhatsAppUrl()}
+                  variant="primary"
+                  size="medium"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   {t('home.discover.button')}
                 </Button>
               </div>
@@ -772,7 +779,7 @@ const Home = () => {
       </section>
 
       {/* ========= CTA SECTION (BOTTOM) ========= */}
-      <CTA translationKey="home.cta" variant="bottom" />
+      <CTA translationKey="home.cta" variant="bottom" buttonTo="#program-mutawifnesia" />
     </div>
   );
 };

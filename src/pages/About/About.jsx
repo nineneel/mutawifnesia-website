@@ -196,7 +196,7 @@ const About = () => {
       </section> */}
 
       {/* ========= CTA SECTION ========= */}
-      <CTA translationKey="about.cta" buttonTo="/join" />
+      <CTA translationKey="about.cta" buttonTo="/#program-mutawifnesia" />
     </main>
   );
 };

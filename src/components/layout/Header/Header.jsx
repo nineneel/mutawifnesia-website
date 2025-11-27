@@ -52,6 +52,11 @@ const Header = () => {
     setIsMenuOpen((prev) => !prev);
   };
 
+  // Determine the button link based on current page
+  const getProgramLink = () => {
+    return location.pathname === '/' ? '#program-mutawifnesia' : '/#program-mutawifnesia';
+  };
+
   return (
     <header className={`header ${isScrolled ? 'header-scrolled' : ''} ${isMenuOpen ? 'menu-open' : ''}`}>
       <div className="header-container">
@@ -86,7 +91,7 @@ const Header = () => {
 
           {/* Section 3 */}
           <div className="nav-actions">
-            <Button to="/join" variant="primary" size="small" className="nav-cta">
+            <Button to={getProgramLink()} variant="primary" size="small" className="nav-cta">
               Gabung Sekarang
             </Button>
           </div>
