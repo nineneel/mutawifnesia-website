@@ -1,0 +1,73 @@
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.logo-image {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+
+.logo-text-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-text {
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--primary-bg-dark);
+  margin: 0;
+  font-weight: 800;
+  white-space: nowrap;
+  transition: color 0.5s ease;
+  margin-top: 2px;
+}
+
+.logo-subtitle {
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+  color: var(--text-primary, #666);
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  transition: color 0.5s ease;
+  margin-top: -2px
+}
+
+/* Header scrolled state */
+.header-scrolled .logo-text {
+  color: var(--white);
+}
+
+.header-scrolled .logo-subtitle {
+  color: var(--white);
+  opacity: 0.8;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .logo-image {
+    width: 40px;
+    height: 40px;
+  }
+
+  .logo-text {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+/* Home background awareness */
+body[data-home-bg='light'] .header.header-scrolled .logo-text,
+body[data-home-bg='light'] .header.header-scrolled .logo-subtitle {
+  color: var(--white);
+}
+
+body[data-home-bg='dark'] .header.header-scrolled .logo-text,
+body[data-home-bg='dark'] .header.header-scrolled .logo-subtitle {
+  color: var(--primary-bg-dark);
+}

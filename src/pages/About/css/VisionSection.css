@@ -41,9 +41,9 @@
 
 .vision-card {
   position: relative;
-  background-image: var(--mutawif-1);
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   padding: 48px 40px;
   display: flex;
   flex-direction: column;
@@ -65,12 +65,10 @@
 
 .vision-card:nth-child(1) {
   animation-delay: 0.1s;
-  background-image: var(--mutawif-1);
 }
 
 .vision-card:nth-child(2) {
   animation-delay: 0.2s;
-  background-image: var(--mutawif-2);
 }
 
 .vision-card:hover::before {

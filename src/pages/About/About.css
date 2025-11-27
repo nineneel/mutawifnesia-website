@@ -1,6 +1,7 @@
 .about {
   flex: 1;
   width: 100%;
+  background: white;
 }
 
 /* ========= HERO SECTION ========= */
@@ -30,9 +31,10 @@
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.4) 0%,
-    rgba(0, 0, 0, 0.6) 100%
+    0deg,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.7) 18%,
+    rgba(0, 0, 0, 0) 40%
   );
 }
 
@@ -62,6 +64,7 @@
   letter-spacing: -0.02em;
   margin: 0 0 24px;
   color: #ffffff;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.6), 0 1px 4px rgba(0, 0, 0, 0.4);
 }
 
 .about-hero-description {
@@ -71,6 +74,7 @@
   color: rgba(255, 255, 255, 0.95);
   max-width: 700px;
   margin: 0 auto;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.5), 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 /* ========= RESPONSIVE DESIGN ========= */

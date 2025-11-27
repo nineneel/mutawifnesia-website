@@ -25,28 +25,28 @@ const About = () => {
   ];
 
   // Organization structure data
-  const organizationRoles = [
-    {
-      position: t('about.organization.roles.chairman'),
-      name: "Dr. Ahmad Hidayat, M.Si",
-      image: IMAGES.MUTAWIF[1],
-    },
-    {
-      position: t('about.organization.roles.secretary'),
-      name: "Dra. Siti Nurhaliza",
-      image: IMAGES.MUTAWIF[2],
-    },
-    {
-      position: t('about.organization.roles.treasurer'),
-      name: "M. Rizki Pratama, S.E",
-      image: IMAGES.MUTAWIF[3],
-    },
-    {
-      position: t('about.organization.roles.coordinator'),
-      name: "Prof. Dr. Abdullah Malik",
-      image: IMAGES.MUTAWIF[4],
-    },
-  ];
+  // const organizationRoles = [
+  //   {
+  //     position: t('about.organization.roles.chairman'),
+  //     name: "Dr. Ahmad Hidayat, M.Si",
+  //     image: IMAGES.MUTAWIF[1],
+  //   },
+  //   {
+  //     position: t('about.organization.roles.secretary'),
+  //     name: "Dra. Siti Nurhaliza",
+  //     image: IMAGES.MUTAWIF[2],
+  //   },
+  //   {
+  //     position: t('about.organization.roles.treasurer'),
+  //     name: "M. Rizki Pratama, S.E",
+  //     image: IMAGES.MUTAWIF[3],
+  //   },
+  //   {
+  //     position: t('about.organization.roles.coordinator'),
+  //     name: "Prof. Dr. Abdullah Malik",
+  //     image: IMAGES.MUTAWIF[4],
+  //   },
+  // ];
 
   // Sync image height with content text height
   useEffect(() => {
@@ -66,12 +66,12 @@ const About = () => {
   }, []);
 
   return (
-    <div className="about">
+    <main className="about">
       {/* ========= HERO SECTION ========= */}
       <section className="about-hero-section">
         <div className="about-hero-background">
           <img
-            src={IMAGES.MUTAWIF[2]}
+            src={IMAGES.MUTAWIF[4]}
             alt="Masjidil Haram"
             className="about-hero-bg-image"
           />
@@ -116,7 +116,7 @@ const About = () => {
               <div className="profile-image-border" />
               <div className="profile-image-wrapper">
                 <img
-                  src={IMAGES.MUTAWIF.GUIDE}
+                  src={IMAGES.MUTAWIF[2]}
                   alt="LSP AHLAN Building"
                   className="profile-image"
                   loading="lazy"
@@ -139,7 +139,13 @@ const About = () => {
 
           <div className="vision-grid">
             {visionMissionValues.map((item, index) => (
-              <div key={index} className="vision-card">
+              <div
+                key={index}
+                className="vision-card"
+                style={{
+                  backgroundImage: `url(${index === 0 ? IMAGES.MUTAWIF[1] : IMAGES.MUTAWIF[2]})`
+                }}
+              >
                 <h3 className="vision-card-type">{item.type}</h3>
                 {item.content ? (
                   <p className="vision-card-content">{item.content}</p>
@@ -160,7 +166,7 @@ const About = () => {
       </section>
 
       {/* ========= ORGANIZATION STRUCTURE SECTION ========= */}
-      <section className="organization-section">
+      {/* <section className="organization-section">
         <div className="organization-container">
           <div className="organization-header">
             <p className="organization-subtitle">{t('about.organization.subtitle')}</p>
@@ -187,11 +193,11 @@ const About = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ========= CTA SECTION ========= */}
       <CTA translationKey="about.cta" buttonTo="/join" />
-    </div>
+    </main>
   );
 };
 

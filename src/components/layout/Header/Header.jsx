@@ -2,7 +2,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import Button from '../../common/Button';
 import LanguageSwitcher from '../../common/LanguageSwitcher';
-import { IMAGES } from '../../../constants/imageConstants';
+import Logo from '../../common/Logo';
 import './Header.css';
 
 const Header = () => {
@@ -56,10 +56,7 @@ const Header = () => {
     <header className={`header ${isScrolled ? 'header-scrolled' : ''} ${isMenuOpen ? 'menu-open' : ''}`}>
       <div className="header-container">
         {/* Section 1 */}
-        <Link to="/" className="logo">
-          <img src={IMAGES.LOGO} alt="Mutawifnesia Logo" className="logo-image" />
-          <h1 className="logo-text">Mutawifnesia</h1>
-        </Link>
+        <Logo variant='' />
         <button
           type="button"
           className={`menu-toggle ${isMenuOpen ? 'menu-toggle-open' : ''}`}
