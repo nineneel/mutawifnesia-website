@@ -2,6 +2,8 @@ import { useState, useEffect, useRef } from "react";
 import { useTranslation, Trans } from "react-i18next";
 import Button from "../../components/common/Button";
 import CTA from "../../components/common/CTA";
+import SEO from "../../components/SEO";
+import { seoConfig } from "../../config/seo";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay, EffectFade } from "swiper/modules";
 import "swiper/css";
@@ -226,15 +228,17 @@ const Home = () => {
   }, []);
 
   return (
-    <div
-      className={`home ${isDarkBg ? "dark-bg" : "light-bg"}`}
-      style={{
-        backgroundColor: bgColor,
-        "--dynamic-text-color": textColor,
-        transition: "background-color 1s ease",
-      }}
-    >
-      {/* ========= HERO SECTION ========= */}
+    <>
+      <SEO {...seoConfig.home} />
+      <div
+        className={`home ${isDarkBg ? "dark-bg" : "light-bg"}`}
+        style={{
+          backgroundColor: bgColor,
+          "--dynamic-text-color": textColor,
+          transition: "background-color 1s ease",
+        }}
+      >
+        {/* ========= HERO SECTION ========= */}
       <section className="hero-section">
         <Swiper
           modules={[Pagination, Autoplay, EffectFade]}
@@ -780,7 +784,8 @@ const Home = () => {
 
       {/* ========= CTA SECTION (BOTTOM) ========= */}
       <CTA translationKey="home.cta" variant="bottom" buttonTo="#program-mutawifnesia" />
-    </div>
+      </div>
+    </>
   );
 };
 

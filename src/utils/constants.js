@@ -25,7 +25,7 @@ export const PACKAGE_TYPES = {
 
 // Contact Information
 export const CONTACT_INFO = {
-  EMAIL: 'info@mutawifnesia.com',
+  EMAIL: 'info@mutawifnesia.id',
   PHONE: '+62 XXX XXX XXX',
   ADDRESS: 'Jakarta, Indonesia'
 };

@@ -1,6 +1,8 @@
 import { useEffect, useRef } from "react";
 import { useTranslation, Trans } from "react-i18next";
 import CTA from "../../components/common/CTA";
+import SEO from "../../components/SEO";
+import { seoConfig } from "../../config/seo";
 import { IMAGES } from "../../constants/imageConstants";
 import "./About.css";
 import "./css/ProfileSection.css";
@@ -66,8 +68,10 @@ const About = () => {
   }, []);
 
   return (
-    <main className="about">
-      {/* ========= HERO SECTION ========= */}
+    <>
+      <SEO {...seoConfig.about} />
+      <main className="about">
+        {/* ========= HERO SECTION ========= */}
       <section className="about-hero-section">
         <div className="about-hero-background">
           <img
@@ -197,7 +201,8 @@ const About = () => {
 
       {/* ========= CTA SECTION ========= */}
       <CTA translationKey="about.cta" buttonTo="/#program-mutawifnesia" />
-    </main>
+      </main>
+    </>
   );
 };
 
