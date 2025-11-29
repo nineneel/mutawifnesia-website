@@ -16,8 +16,8 @@ export const IMAGES = {
     CTA_BACKGROUND: "/images/cta-background.webp",
     CTA_BACKGROUND_2: "/images/cta-background-2.webp",
     MUTAWIF_GUIDE: "/images/sections/mutawif-guide.png",
-    LEMBAGA_IMAGE: "/images/sections/lembaga-image.jpg",
-    SYARAT_IMAGE: "/images/sections/syarat-image.jpg",
+    LEMBAGA_IMAGE: "/images/sections/lembaga-image.jpeg",
+    SYARAT_IMAGE: "/images/sections/syarat-image.jpeg",
     DISCOVER_PACKAGE: "/images/sections/discover-package.webp",
   },
 
@@ -49,7 +49,7 @@ export const IMAGES = {
 
   // Why Section
   WHY: {
-    1: "/images/home/why/why-01.jpg",
+    1: "/images/home/why/why-01.jpeg",
     2: "/images/home/why/why-02.jpeg",
     3: "/images/home/why/why-03.jpg",
     4: "/images/home/why/why-04.jpg",
@@ -62,22 +62,6 @@ export const IMAGES = {
     3: "/images/home/impact/impact-3.jpg",
     4: "/images/home/impact/impact-4.jpg",
     5: "/images/home/impact/impact-5.jpg",
-  },
-
-  // Background Images
-  BACKGROUND: {
-    1: "/images/background-image/background-image-1.jpeg",
-    2: "/images/background-image/background-image-2.jpeg",
-    3: "/images/background-image/background-image-3.jpeg",
-    4: "/images/background-image/background-image-4.jpeg",
-    5: "/images/background-image/background-image-5.jpeg",
-    6: "/images/background-image/background-image-6.jpeg",
-    7: "/images/background-image/background-image-7.jpeg",
-    8: "/images/background-image/background-image-8.jpeg",
-    9: "/images/background-image/background-image-9.jpeg",
-    10: "/images/background-image/background-image-10.jpeg",
-    11: "/images/background-image/background-image-11.jpeg",
-    12: "/images/background-image/background-image-12.jpeg",
   },
 
   // Logo

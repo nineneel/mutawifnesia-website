@@ -133,7 +133,7 @@
       "description": "Ikuti alur sertifikasi dari pendaftaran dan verifikasi berkas, asesmen mandiri, uji kompetensi, penetapan hasil hingga penerbitan sertifikat.",
       "steps": [
         "Pendaftaran peserta dan proses verifikasi kelengkapan dokumen persyaratan.",
-        "Pelaksanaan Asesmen Mandiri (Self Assessment) untuk mengukur kesiapan peserta.",
+        "Pelaksanaan pelatihan bahasa Arab intensif, Pembelajaran materi pembimbing Umrah & Haji, Ujian sertifikasi pembimbing Umrah & Haji",
         "Pelaksanaan Uji Kompetensi yang meliputi observasi praktik atau simulasi bimbingan, sesi wawancara mendalam, serta tes pengetahuan terkait profesi mutawif.",
         "Penetapan dan pengumuman hasil Uji Kompetensi dengan status Kompeten atau Belum Kompeten.",
         "Penerbitan dan penyerahan Sertifikat Kompetensi bagi peserta yang dinyatakan kompeten."
@@ -147,7 +147,7 @@
       "features": [
         "Belajar langsung dari praktisi ibadah bersertifikat dengan kurikulum standar nasional",
         "Praktik lapangan langsung di Tanah Suci dengan bimbingan mentor berpengalaman",
-        "Sertifikat resmi dari LSP (Lembaga Sertifikasi Profesi)",
+        "Sertifikasi resmi dari BNSP dengan Sertifikat Nasional resmi berlogo Garuda",
         "Kuasai bahasa Arab untuk komunikasi efektif dengan jamaah",
         "Akomodasi lengkap termasuk makan dan penginapan selama program beserta fasilitas lainnya"
       ],
@@ -170,8 +170,8 @@
     },
     "profile": {
       "subtitle": "Profil Lembaga",
-      "title": "LSP AHLAN",
-      "description1": "LSP AHLAN adalah <0>Lembaga Sertifikasi Profesi</0> yang berkomitmen untuk meningkatkan standar kompetensi mutawif di Indonesia. Kami bekerja sama dengan <1>Badan Nasional Sertifikasi Profesi (BNSP)</1> dan Kementerian Agama RI untuk menghasilkan pembimbing ibadah yang profesional dan kompeten.",
+      "title": "AHLAN Certification",
+      "description1": "AHLAN Certification adalah <0>Lembaga Sertifikasi Profesi</0> yang berkomitmen untuk meningkatkan standar kompetensi mutawif di Indonesia. Kami bekerja sama dengan <1>Badan Nasional Sertifikasi Profesi (BNSP)</1> dan Kementerian Agama RI untuk menghasilkan pembimbing ibadah yang profesional dan kompeten.",
       "description2": "Dengan pengalaman lebih dari 5 tahun, kami telah mensertifikasi ratusan mutawif yang kini aktif melayani jamaah di seluruh Indonesia dan Tanah Suci."
     },
     "vision": {

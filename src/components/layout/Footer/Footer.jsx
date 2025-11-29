@@ -46,13 +46,19 @@ const Footer = () => {
           <div className="footer-section">
             <h4>Kontak</h4>
             <ul>
-              <li>Email: info@mutawifnesia.com</li>
+              <li>Email: <a href="mailto:mutawifnesia@gmail.com" className="contact-link"><b>mutawifnesia@gmail.com</b></a></li>
+              <li>WA: <a href="https://wa.me/6282130818170" target="_blank" rel="noopener noreferrer" className="contact-link"><b>+6282130818170</b></a></li>
+            </ul>
+
+            <h4 style={{ paddingTop: 12 }}>Alamat HQ</h4>
+            <ul>
+              <li>Gedung Fancy Mampang, Jl. Mampang Prpt. Raya No.151 Lantai 4 Unit A7, RT.3/RW.1, Duren Tiga, Kec. Pancoran, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12760</li>
             </ul>
           </div>
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; {currentYear} Mutawifnesia. Hak Cipta Dilindungi.</p>
+          <p>&copy; {currentYear} PT ACCREDITATION HAJJ AND UMRAH LAND ARRANGEMENT. Hak Cipta Dilindungi.</p>
         </div>
       </div>
     </footer>

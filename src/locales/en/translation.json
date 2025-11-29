@@ -133,7 +133,7 @@
       "description": "Follow the certification flow from registration and document verification, self-assessment, competency test, result determination to certificate issuance.",
       "steps": [
         "Participant registration and verification process of required document completeness.",
-        "Implementation of Self Assessment to measure participant readiness.",
+        "Implementation of intensive Arabic language training, Umrah & Hajj worship guidance materials, and Umrah & Hajj worship certification training",
         "Implementation of Competency Test which includes practice observation or guidance simulation, in-depth interview sessions, and knowledge test related to the mutawif profession.",
         "Determination and announcement of Competency Test results with Competent or Not Yet Competent status.",
         "Issuance and delivery of Competency Certificate for participants declared competent."
@@ -147,7 +147,7 @@
       "features": [
         "Learn directly from certified worship practitioners with national standard curriculum",
         "Direct field practice in the Holy Land with experienced mentor guidance",
-        "Official certificate from LSP (Lembaga Sertifikasi Profesi)",
+        "Official Certification from BNSP with National Official Certificate bearing the Garuda logo",
         "Master Arabic for effective communication with pilgrims",
         "Complete accommodation including meals, lodging throughout the program and other amenities"
       ],
@@ -170,8 +170,8 @@
     },
     "profile": {
       "subtitle": "Institution Profile",
-      "title": "LSP AHLAN",
-      "description1": "LSP AHLAN is a <0>Professional Certification Institution</0> committed to improving the competency standards of mutawif in Indonesia. We collaborate with the <1>National Professional Certification Board (BNSP)</1> and the Ministry of Religious Affairs of the Republic of Indonesia to produce professional and competent worship guides.",
+      "title": "AHLAN Certification",
+      "description1": "AHLAN Certification is a <0>Professional Certification Institution</0> committed to improving the competency standards of mutawif in Indonesia. We collaborate with the <1>National Professional Certification Board (BNSP)</1> and the Ministry of Religious Affairs of the Republic of Indonesia to produce professional and competent worship guides.",
       "description2": "With more than 5 years of experience, we have certified hundreds of mutawif who are now actively serving pilgrims throughout Indonesia and the Holy Land."
     },
     "vision": {

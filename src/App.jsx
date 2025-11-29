@@ -1,5 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import { Header, Footer } from './components/layout';
+import { WhatsAppButton } from './components/common';
 import './App.css';
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
         <Outlet />
       </main>
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 }

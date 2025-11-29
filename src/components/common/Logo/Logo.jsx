@@ -15,7 +15,7 @@ const Logo = ({
       {showText && (
         <div className="logo-text-container">
           <h1 className="logo-text">MUTAWIFNESIA</h1>
-          <span className="logo-subtitle">by AHLAN</span>
+          <span className="logo-subtitle">by AHLAN Certification</span>
         </div>
       )}
     </Link>
